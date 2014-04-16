@@ -1,0 +1,206 @@
+body, div, row{
+background-color: rgba(255, 255, 255, 0);
+/*display: inline-block; */
+}
+
+row {
+display: inline-block;
+}
+
+html {
+padding: 1% 1% 0% 0%;
+  background: url(../pics/export-11.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: KGSecondChancesSketch;
+  src: url(../fonts/KGSecondChancesSketch.woff) format('woff'), url(../fonts/KGSecondChancesSketch.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: KGSecondChancesSolid;
+  src: url(../fonts/KGSecondChancesSolid.woff) format('woff'), url(../fonts/KGSecondChancesSolid.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: LoveYaLikeASister;
+  src: url(../fonts/LoveYaLikeASister.woff) format('woff'), url(../fonts/LoveYaLikeASister.ttf) format('truetype');
+}
+
+@font-face {
+font-family: urban;
+src: url(../fonts/urban.woff) format('woff'), url(../fonts/urban.ttf) format('truetype');
+}
+  
+@font-face {
+font-family: Archistico_Bold;
+src: url(../fonts/Archistico_Bold.woff) format('woff'), url(../fonts/Archistico_Bold.ttf) format('truetype');
+}
+
+@font-face {
+font-family: Archistico_Simple;
+src: url(../fonts/Archistico_Simple.woff) format('woff'), url(../fonts/Archistico_Simple.ttf) format('truetype');
+}
+
+@font-face {
+font-family: Blackout-Midnight;
+src: url(../fonts/Blackout-Midnight.woff) format('woff'), url(../fonts/Blackout-Midnight.ttf) format('truetype');
+}
+
+@font-face {
+font-family: Blackout-2am;
+src: url(../fonts/Blackout-2am.woff) format('woff'), url(../fonts/Blackout-2am.ttf) format('truetype');
+}
+
+@font-face {
+font-family: CaviarDreams;
+src: url(../fonts/CaviarDreams.woff) format('woff'), url(../fonts/CaviarDreams.ttf) format('truetype');
+}
+
+@font-face {
+font-family: CaviarDreamsBold;
+src: url(../fonts/CaviarDreamsBold.woff) format('woff'), url(../fonts/CaviarDreamsBold.ttf) format('truetype');
+}
+
+@font-face {
+font-family: BebasNeue;
+src: url(../fonts/BebasNeue.woff) format('woff'), url(../fonts/BebasNeue.ttf) format('truetype');
+}
+ 
+.KGSecondChancesSketch {
+background-color: rgba(112,112,112, 0.0);
+font-family: 'KGSecondChancesSketch', Serif, Arial, Ubuntu;
+}
+
+.KGSecondChancesSolid {
+background-color: rgba(112,112,112, 0.0);
+font-family: 'KGSecondChancesSolid', Serif, Arial, Ubuntu;
+}
+
+.LoveYaLikeASister {
+background-color: rgba(112,112,112, 0.0);
+font-family: 'LoveYaLikeASister', Serif, Arial, Ubuntu;
+}
+
+.Urban {
+background-color: rgba(112,112,112, 0.0);
+font-family: 'Urban', Serif, Arial, Ubuntu;
+font-weight: 'Strong';
+}
+
+.Archistico_Bold {
+background-color: rgba(112,112,112, 0.0);
+font-family: 'Archistico_Bold', Serif, Arial, Ubuntu;
+}
+
+.Archistico_Simple {
+background-color: rgba(112,112,112, 0.0);
+font-family: 'Archistico_Simple', Serif, Arial, Ubuntu;
+}
+
+.Blackout-Midnight {
+background-color: rgba(112,112,112, 0.0);
+font-family: 'Blackout-Midnight', Serif, Arial, Ubuntu;
+}
+
+.Blackout-2am {
+background-color: rgba(112,112,112, 0.0);
+font-family: 'Blackout-2am', Serif, Arial, Ubuntu;
+}
+
+.CaviarDreams {
+background-color: rgba(112,112,112, 0.0);
+font-family: 'CaviarDreams', Serif, Arial, Ubuntu;
+}
+
+.CaviarDreamsBold {
+background-color: rgba(112,112,112, 0.0);
+font-family: 'CaviarDreamsBold', Serif, Arial, Ubuntu;
+}
+
+.BebasNeue {
+background-color: rgba(112,112,112, 0.0);
+font-family: 'BebasNeue', Serif, Arial, Ubuntu;
+}
+
+.purple {
+color: rgba(64,0,64,1);
+}
+
+.names {
+font-family: 'Archistico_Bold', Calibri, Ubuntu, Arial;
+font-size: 3.21em; /*font size = 45 px, base h1 font size = 38.5*/
+}
+
+.date {
+font-size: 1.5em;
+font-family: 'CaviarDreams', Open Sans Condensed , Ubuntu;
+}
+
+.place {
+font-size: 1.3em;
+font-family: 'Blackout-2am', Ubuntu;
+}
+
+.downsize {
+font-size: 0.7em;
+}
+
+.links {
+font-family: 'BebasNeue';
+font-size: 2em;
+padding: 15% 0% 0% 0%;
+position: relative;
+
+}
+
+a {
+color: rgba(64,0,64,1.0);
+background-color: transparent;
+}
+
+a:link,
+a:visited {
+color: rgba(64,0,64,1);
+}
+
+
+.nav-tabs {
+  border-bottom: transparent;
+}
+
+.nav > li :hover,
+.nav > li :focus {
+cursor: pointer;
+text-decoration: underline;
+background-color: transparent;
+border-color: transparent;
+border-bottom-color: transparent;
+}
+
+.nav-tabs > li.active {
+  color: #400040;
+  cursor: default;
+  background-color: transparent;
+  border: transparent;
+  border-bottom-color: transparent;
+  font-weight:bold;
+}
+
+.content{
+border-radius: 10px;
+}
+
+.thumbs {
+display: inline-block;
+padding: 5%;
+}
+
+img{
+border-color: #ffffff;
+border-style: solid;
+}

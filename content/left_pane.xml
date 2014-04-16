@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<div class = "row">
+	<h1 class="names">Manisha  &amp;  Ashwin</h1>
+	<p class = "date">July 9&lt;sup&gt;th&lt;/sup&gt;, 2014</p>
+</div>
+<div class = "row place">
+	<h2>Chennai &lt; span class="glyphicon glyphicon-globe "&gt; &lt;/ span &gt; India</h2>
+</div>
+<div class = "row links">
+	<ul class="nav nav-tabs nav-stacked">
+		<li><a href="#">HOME</a></li>
+		<li><a href="#">OUR STORY</a></li>
+		<li><a href="#">SCHEDULE</a></li>
+		<li><a href="#">INFORMATION</a></li>
+		<li><a href="#">RSVP</a></li>
+		<li><a href="#">GUESTBOOK</a></li>
+		<li><a href="#">PICS</a></li>
+	</ul>
+</div>
