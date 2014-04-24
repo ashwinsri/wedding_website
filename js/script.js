@@ -1,6 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-	$('li').hover(
+    $.post("test.php", { filename: "left_pane.xml" })
+.done(function (data) {
+    $(".container").html(data);
+
+ $('li').hover(
 		function()
 		{	
 			$(this).css('cursor', 'pointer');
@@ -12,19 +16,17 @@ $(document).ready(function() {
 			$(this).css('font-weight', 'normal');
 		}
 	);
-	
-	$('#home').click(function(){
-		 $('.content').fadeOut('fast',function()
-		 {
-			$('.content').css('background-color', 'rgba(0,0,0,0)');
-			$(this).empty();
-		 });
-	});
-	
-	$('#pics').click(function()
-	{
-		$('.content').css('background-color', 'rgba(0,0,0,0.7)');
-		$('.content').append(' \
+
+ $('#home').click(function () {
+     $('.content').fadeOut('fast', function () {
+         $('.content').css('background-color', 'rgba(0,0,0,0)');
+         $(this).empty();
+     });
+ });
+
+ $('#pics').click(function () {
+     $('.content').css('background-color', 'rgba(0,0,0,0.7)');
+     $('.content').append(' \
 			<ul class "thumbnails">\
 				<div class = "thumbs">\
 					<img src = "pics/thumb_IMG_1271.jpg" />\
@@ -55,7 +57,20 @@ $(document).ready(function() {
 				</div>\
 			</ul>\
 			');
-		$('.content').fadeIn('fast');
-	});
+     $('.content').fadeIn('fast');
+ });
+
+
+
+
+
+});
+
+   
+
+       
+	
+	
+
 
 });

@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <div class = "row">
-	<h1 class="names">Manisha  &amp;  Ashwin</h1>
-	<p class = "date">July 9&lt;sup&gt;th&lt;/sup&gt;, 2014</p>
-</div>
-<div class = "row place">
-	<h2>Chennai &lt; span class="glyphicon glyphicon-globe "&gt; &lt;/ span &gt; India</h2>
-</div>
-<div class = "row links">
-	<ul class="nav nav-tabs nav-stacked">
-		<li><a href="#">HOME</a></li>
-		<li><a href="#">OUR STORY</a></li>
-		<li><a href="#">SCHEDULE</a></li>
-		<li><a href="#">INFORMATION</a></li>
-		<li><a href="#">RSVP</a></li>
-		<li><a href="#">GUESTBOOK</a></li>
-		<li><a href="#">PICS</a></li>
-	</ul>
+  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 purple">
+    <div class = "row">
+      <h1 class="names">Manisha  &  Ashwin</h1>
+      <p class = "date">
+        July 9<sup>th</sup>, 2014
+      </p>
+    </div>
+    <div class = "row place">
+      <h2>
+        Chennai <span class="glyphicon glyphicon-globe "></span> India
+      </h2>
+    </div>
+    <div class = "row links">
+      <ul class="nav nav-tabs nav-stacked">
+        <li class="active" id="home">HOME</li>
+        <li id="story">OUR STORY</li>
+        <li id="sched">SCHEDULE</li>
+        <li id="info">INFORMATION</li>
+        <li id="rsvp">RSVP</li>
+        <li id="gb">GUESTBOOK</li>
+        <li id="pics">PICS</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 content flash">
+
+  </div>
 </div>
