@@ -1,9 +1,7 @@
 $(".container").css('display', 'none');
 
 $(document).ready(function () 
-{
-
-	
+{	
 	$.post("test.php", { filename: "left_pane.xml" })
 	.done(function (data) 
 	{
@@ -67,38 +65,31 @@ $.fn.enPageFns = function()
 		});
 	});
 
-	$('#pics').click(function () {
-    $('.content').css('background-color', 'rgba(0,0,0,0.7)');
-    $('.content').append(' \
-			<ul class "thumbnails">\
-				<div class = "thumbs">\
-					<img src = "pics/thumb_IMG_1271.jpg" />\
-				</div>\
-				<div class = "thumbs">\
-					<img src = "pics/thumb_IMG_0002.jpg" />\
-				</div>\
-				<div class = "thumbs">\
-					<img src = "pics/thumb_IMG_1687.jpg" />\
-				</div>\
-				<div class = "thumbs">\
-					<img src = "pics/thumb_IMG_1688.jpg" />\
-				</div>\
-				<div class = "thumbs">\
-					<img src = "pics/thumb_IMG_1689.jpg" />\
-				</div>\
-				<div class = "thumbs">\
-					<img src = "pics/thumb_IMG_1750.jpg" />\
-				</div>\
-				<div class = "thumbs">\
-					<img src = "pics/thumb_IMG_2658.jpg" />\
-				</div>\
-				<div class = "thumbs">\
-					<img src = "pics/thumb_IMG_3028.jpg" />\
-				</div>\
-				<div class = "thumbs">\
-					<img src = "pics/thumb_IMG_3029.jpg" />\
-				</div>\
-			</ul>');
+
+	$('#pics').click(function () 
+	{
+		var picsContent = $(document).getContent('thumbs.xml');
+		$('.content').css('background-color', 'rgba(0,0,0,0.7)');
+		$('.content').append(picsContent);
 		$('.content').fadeIn('fast');
 	});	
+}
+
+
+/*******************************************
+Name: getContent
+Args: file
+Desc: Generic content-get function.
+*******************************************/
+$.fn.getContent = function(file)
+{
+	$.post("test.php", { filename: file })
+	.done(function (data) 
+	{
+		return data;
+	})
+	.fail(function(jqXHR, textStatus, errMsg) 
+	{
+		return textStatus;
+	});
 }

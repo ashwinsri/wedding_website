@@ -1,0 +1,29 @@
+<ul class "thumbnails">
+	<div class = "thumbs">
+		<img src = "pics/thumb_IMG_1271.jpg" />
+	</div>
+	<div class = "thumbs">
+		<img src = "pics/thumb_IMG_0002.jpg" />
+	</div>
+	<div class = "thumbs">
+		<img src = "pics/thumb_IMG_1687.jpg" />
+	</div>
+	<div class = "thumbs">
+		<img src = "pics/thumb_IMG_1688.jpg" />
+	</div>
+	<div class = "thumbs">
+		<img src = "pics/thumb_IMG_1689.jpg" />
+	</div>
+	<div class = "thumbs">
+		<img src = "pics/thumb_IMG_1750.jpg" />
+	</div>
+	<div class = "thumbs">
+		<img src = "pics/thumb_IMG_2658.jpg" />
+	</div>
+	<div class = "thumbs">
+		<img src = "pics/thumb_IMG_3028.jpg" />
+	</div>
+	<div class = "thumbs">
+		<img src = "pics/thumb_IMG_3029.jpg" />
+	</div>
+</ul>
