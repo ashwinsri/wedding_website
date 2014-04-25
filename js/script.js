@@ -1,3 +1,4 @@
+
 $(".container").css('display', 'none');
 
 $(document).ready(function () 
@@ -68,10 +69,7 @@ $.fn.enPageFns = function()
 
 	$('#pics').click(function () 
 	{
-		var picsContent = $(document).getContent('thumbs.xml');
-		$('.content').css('background-color', 'rgba(0,0,0,0.7)');
-		$('.content').append(picsContent);
-		$('.content').fadeIn('fast');
+		$(document).getContent('thumbs.xml');
 	});	
 }
 
@@ -79,17 +77,18 @@ $.fn.enPageFns = function()
 /*******************************************
 Name: getContent
 Args: file
-Desc: Generic content-get function.
+Desc: Generic content-get function. Saves 
+content to div defined by '.content' class.
 *******************************************/
 $.fn.getContent = function(file)
 {
 	$.post("test.php", { filename: file })
 	.done(function (data) 
 	{
-		return data;
+		$('.content').css('background-color', 'rgba(0,0,0,0.7)').html(data.toString()).fadeIn('fast');
 	})
 	.fail(function(jqXHR, textStatus, errMsg) 
 	{
-		return textStatus;
+		$('.content').css('background-color', 'rgba(0,0,0,0.7)').html(textStatus).fadeIn('fast');
 	});
 }

@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <ul class "thumbnails">
 	<div class = "thumbs">
-		<img src = "pics/thumb_IMG_1271.jpg" />
+		<a href="pics/IMG_1271.jpg"><img src = "pics/thumb_IMG_1271.jpg" /></a>
 	</div>
 	<div class = "thumbs">
 		<img src = "pics/thumb_IMG_0002.jpg" />
