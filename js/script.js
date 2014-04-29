@@ -1,8 +1,7 @@
 
 $(".container").css('display', 'none');
 
-$(document).ready(function () 
-{	
+$(document).ready(function () {
 	$.post("test.php", { filename: "left_pane.xml" })
 	.done(function (data) 
 	{
@@ -69,8 +68,15 @@ $.fn.enPageFns = function()
 
 	$('#pics').click(function () 
 	{
-		$(document).getContent('thumbs.xml');
-	});	
+	    $(document).getContent('thumbs.xml');
+	
+	});
+    
+	$('#rsvp').click(function () {
+	    $(document).getContent('rsvp.xml');
+
+	});
+	
 }
 
 
@@ -80,7 +86,7 @@ Args: file
 Desc: Generic content-get function. Saves 
 content to div defined by '.content' class.
 *******************************************/
-$.fn.getContent = function(file)
+$.fn.getContent = function(file, element)
 {
 	$.post("test.php", { filename: file })
 	.done(function (data) 

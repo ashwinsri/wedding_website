@@ -1,30 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <ul class "thumbnails">
-	<div class = "thumbs">
-		<a href="pics/IMG_1271.jpg"><img src = "pics/thumb_IMG_1271.jpg" /></a>
+	<div id="thumb1" class = "thumbs">
+		<img src = "pics/thumb_IMG_1271.jpg" />
 	</div>
-	<div class = "thumbs">
+	<div id="thumb2" class = "thumbs">
 		<img src = "pics/thumb_IMG_0002.jpg" />
 	</div>
-	<div class = "thumbs">
+	<div id="thumb3" class = "thumbs">
 		<img src = "pics/thumb_IMG_1687.jpg" />
 	</div>
-	<div class = "thumbs">
+	<div id="thumb4" class = "thumbs">
 		<img src = "pics/thumb_IMG_1688.jpg" />
 	</div>
-	<div class = "thumbs">
+	<div id="thumb5" class = "thumbs">
 		<img src = "pics/thumb_IMG_1689.jpg" />
 	</div>
-	<div class = "thumbs">
+	<div id="thumb6" class = "thumbs">
 		<img src = "pics/thumb_IMG_1750.jpg" />
 	</div>
-	<div class = "thumbs">
+	<div id="thumb7" class = "thumbs">
 		<img src = "pics/thumb_IMG_2658.jpg" />
 	</div>
-	<div class = "thumbs">
+	<div id="thumb8" class = "thumbs">
 		<img src = "pics/thumb_IMG_3028.jpg" />
 	</div>
-	<div class = "thumbs">
+	<div id="thumb9" class = "thumbs">
 		<img src = "pics/thumb_IMG_3029.jpg" />
 	</div>
 </ul>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:black">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body" style="background-color:black">
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+  $('.thumbs').click(function () {
+  var imgID = $(this).attr('id').toString().replace("thumb","pic");
+  var index = parseInt(imgID.replace("pic",""));
+  $('#myModal').modal('show');
+  $.post("test.php", { filename: 'carousel.xml' })
+  .done(function (data) {
+  $('.modal-body').html(data.toString()).fadeIn('fast');
+  $("#"+imgID).removeClass( "item" ).addClass("item active");
+  $(".carousel-indicators").children().eq(index-1).addClass("active");
+  })
+  .fail(function (jqXHR, textStatus, errMsg) {
+  $('.modal-body').html(textStatus).fadeIn('fast');
+  });
+
+  });
+</script>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs">
+  <li class="active">
+    <a href="#home" data-toggle="tab">Home</a>
+  </li>
+  <li>
+    <a href="#profile" data-toggle="tab">Profile</a>
+  </li>
+  <li>
+    <a href="#messages" data-toggle="tab">Messages</a>
+  </li>
+  <li>
+    <a href="#settings" data-toggle="tab">Settings</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home">content1</div>
+  <div class="tab-pane" id="profile">content2</div>
+  <div class="tab-pane" id="messages">content3</div>
+  <div class="tab-pane" id="settings">content4</div>
+</div>
