@@ -68,15 +68,15 @@ $.fn.enPageFns = function()
 
 	$('#pics').click(function () 
 	{
-	    $(document).getContent('carousel.xml');
-	
+	    $(document).getContent('carousel.xml');	
 	});
     
 	$('#rsvp').click(function () {
 	    $(document).getContent('rsvp.xml');
-
 	});
 	
+		$(document).getContent('thumbs.xml', 'content');
+	});	
 }
 
 
@@ -84,17 +84,18 @@ $.fn.enPageFns = function()
 Name: getContent
 Args: file
 Desc: Generic content-get function. Saves 
-content to div defined by '.content' class.
+content to div defined by 'element' class.
 *******************************************/
 $.fn.getContent = function(file, element)
 {
+	var classname = '.'+element;
 	$.post("test.php", { filename: file })
 	.done(function (data) 
 	{
-		$('.content').css('background-color', 'rgba(0,0,0,0.7)').html(data.toString()).fadeIn('fast');
+		$(classname).css('background-color', 'rgba(0,0,0,0.7)').html(data.toString()).fadeIn('fast');
 	})
 	.fail(function(jqXHR, textStatus, errMsg) 
 	{
-		$('.content').css('background-color', 'rgba(0,0,0,0.7)').html(textStatus).fadeIn('fast');
+		$(classname).css('background-color', 'rgba(0,0,0,0.7)').html(textStatus).fadeIn('fast');
 	});
 }
