@@ -68,15 +68,12 @@ $.fn.enPageFns = function()
 
 	$('#pics').click(function () 
 	{
-	    $(document).getContent('carousel.xml');	
+	    $(document).getContent('carousel.xml', 'content');	
 	});
     
 	$('#rsvp').click(function () {
-	    $(document).getContent('rsvp.xml');
+	    $(document).getContent('rsvp.xml', 'content');
 	});
-	
-		$(document).getContent('thumbs.xml', 'content');
-	});	
 }
 
 
