@@ -11,7 +11,6 @@
 		<div class = "row links">
 			<ul class="nav nav-tabs nav-stacked">
 				<li class="active" id="home">home</li>
-				<li id="story">our story</li>
 				<li id="sched">schedule</li>
 				<li id="info">information</li>
 				<li id="rsvp">rsvp</li>

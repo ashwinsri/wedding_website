@@ -1,25 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs">
+    <ul class="nav nav-tabs" style="width:100%">
   <li class="active">
-    <a href="#home" data-toggle="tab">Home</a>
+    <a href="#rsvp1" data-toggle="tab">Chennai Wedding</a>
   </li>
   <li>
-    <a href="#profile" data-toggle="tab">Profile</a>
-  </li>
-  <li>
-    <a href="#messages" data-toggle="tab">Messages</a>
-  </li>
-  <li>
-    <a href="#settings" data-toggle="tab">Settings</a>
+    <a href="#rsvp2" data-toggle="tab">Seattle Party</a>
   </li>
 </ul>
 
-<!-- Tab panes -->
+
 <div class="tab-content">
-  <div class="tab-pane active" id="home">content1</div>
-  <div class="tab-pane" id="profile">content2</div>
-  <div class="tab-pane" id="messages">content3</div>
-  <div class="tab-pane" id="settings">content4</div>
+  <div class="tab-pane active" id="rsvp1">
+    <form name="input" action="demo_form_action.asp" method="get">
+      <br>
+        <br>
+      Name: <input type="text" name="fullname" value="" />
+      <br />
+      Attending?
+      <br />
+      <input type="radio" name="sex" value="yes" />
+      Yes<br />
+      <input type="radio" name="sex" value="no" />
+      No<br />
+      # of Guests <input type="text" name="guests" value="" />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+    <br />
+    <br />
+  </div>
+  <div class="tab-pane" id="rsvp2">
+    <form name="input" action="demo_form_action.asp" method="get">
+      <br />
+      <br />
+      Name: <input type="text" name="fullname" value="" />
+      <br />
+      Attending?
+      <br />
+      <input type="radio" name="sex" value="yes" />
+      Yes<br />
+      <input type="radio" name="sex" value="no" />
+      No<br />
+      # of Guests <input type="text" name="guests" value="" />
+      <br />
+      <input type="submit" value="Submit" />
+
+    </form>
+    <br />
+    <br />
+
+  </div>
 </div>

@@ -68,7 +68,7 @@ $.fn.enPageFns = function()
 
 	$('#pics').click(function () 
 	{
-	    $(document).getContent('thumbs.xml');
+	    $(document).getContent('carousel.xml');
 	
 	});
     

@@ -204,3 +204,16 @@ img{
 border-color: #ffffff;
 border-style: solid;
 }
+
+.content { color: white;}
+
+
+
+.modal-dialog {
+  width: 75%;
+  border-radius: 0;
+}
+
+#myModal {
+    background-color: black;
+}
