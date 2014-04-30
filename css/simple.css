@@ -207,13 +207,12 @@ border-style: solid;
 
 .content { color: white;}
 
-
-
-.modal-dialog {
-  width: 75%;
-  border-radius: 0;
+.carousel-inner {
+	overflow: hidden;
 }
 
-#myModal {
-    background-color: black;
+.carousel-indicators li{
+    width: 10%; 
+    height:100%;
+    background-size: 100%;
 }
