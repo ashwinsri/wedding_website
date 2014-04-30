@@ -65,7 +65,6 @@ $.fn.enPageFns = function()
 		});
 	});
 
-
 	$('#pics').click(function () 
 	{
 	    $(document).getContent('carousel.xml', 'content');	
@@ -73,6 +72,10 @@ $.fn.enPageFns = function()
     
 	$('#rsvp').click(function () {
 	    $(document).getContent('rsvp.xml', 'content');
+	});
+	
+	$('#info').click(function () {
+	    $(document).getContent('attractions.xml', 'content');
 	});
 }
 
