@@ -11,8 +11,9 @@
 		<div class = "row links">
 			<ul class="nav nav-tabs nav-stacked">
 				<li class="active" id="home">home</li>
-				<li id="sched">schedule</li>
-				<li id="info">information</li>
+				<li id="story">our story</li>
+				<li id="sched">the wedding</li>
+				<li id="info">attractions</li>
 				<li id="rsvp">rsvp</li>
 				<li id="gb">guestbook</li>
 				<li id="pics">pics</li>
