@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+  <ol class="carousel-indicators" style="height:10%">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active" style="background: url(../pics/thumb_IMG_1271.jpg) no-repeat;  width: 10%; height:100%; background-size: 100%;"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1" style="background: url(../pics/thumb_IMG_0002.jpg) no-repeat;"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2" style="background: url(../pics/thumb_IMG_1687.jpg) no-repeat;"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3" style="background: url(../pics/thumb_IMG_1688.jpg) no-repeat;"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4" style="background: url(../pics/thumb_IMG_1689.jpg) no-repeat;"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="5" style="background: url(../pics/thumb_IMG_1750.jpg) no-repeat;"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="6" style="background: url(../pics/thumb_IMG_2658.jpg) no-repeat;"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="7" style="background: url(../pics/thumb_IMG_3028.jpg) no-repeat;"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="8" style="background: url(../pics/thumb_IMG_3029.jpg) no-repeat;"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" style="overflow:hidden">
     <div id="pic1" class="item active">
-      <img src = "pics/IMG_1271.jpg" />       
+      <img src = "pics/IMG_1271.JPG" />       
       </div>
     <div id="pic2" class="item ">
       <img src = "pics/IMG_0002.jpg" />      
       </div>
     <div item="pic3" class="item ">
-      <img src = "pics/IMG_1687.jpg" />
+      <img src = "pics/IMG_1687.JPG" />
     </div>
     <div id="pic4" class="item ">
-      <img src = "pics/IMG_1688.jpg" />
+      <img src = "pics/IMG_1688.JPG" />
     </div>
     <div id="pic5" class="item ">
-      <img src = "pics/IMG_1689.jpg" />
+      <img src = "pics/IMG_1689.JPG" />
     </div>
     <div id="pic6" class="item ">
       <img src = "pics/IMG_1750.jpg" />
     </div>
     <div id="pic7" class="item ">
-      <img src = "pics/IMG_2658.jpg" />
+      <img src = "pics/IMG_2658.JPG" />
     </div>
     <div id="pic8" class="item ">
       <img src = "pics/IMG_3028.jpg" />
@@ -53,3 +53,15 @@
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
 </div>
+<script type="text/javascript">
+  var w = $(".carousel-inner").width();
+  $(".carousel-inner").height(w*.68);
+
+jQuery(document).bind('keyup', function(e) {
+    if (e.which==39) {
+        jQuery('#carousel-example-generic').carousel('next');
+    } else if (e.which==37) {
+        jQuery('#carousel-example-generic').carousel('prev');
+    }
+});
+</script>
