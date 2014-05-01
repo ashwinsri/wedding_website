@@ -133,26 +133,26 @@ color: rgba(64,0,64,1);
 
 .names {
 font-family: 'Archistico_Bold', Calibri, Ubuntu, Arial;
-font-size: 3.21em; /*font size = 45 px, base h1 font size = 38.5*/
+font-size: 3vmax; /*font size = 45 px, base h1 font size = 38.5*/
 }
 
 .date {
-font-size: 1.5em;
+font-size: 1.5vmax;
 font-family: 'CaviarDreams', Open Sans Condensed , Ubuntu;
 }
 
 .place {
-font-size: 1.3em;
+font-size: 1vmax;
 font-family: 'Blackout-2am', Ubuntu;
 }
 
 .downsize {
-font-size: 0.7em;
+font-size: 0.6vmax;
 }
 
 .links {
 font-family: 'BebasNeue';
-font-size: 2em;
+font-size: 1.7vmax;
 padding: 15% 0% 0% 0%;
 position: relative;
 
@@ -192,7 +192,10 @@ border-bottom-color: transparent;
 }
 
 .content{
-border-radius: 10px;
+	border-radius: 10px;
+	overflow:auto;
+	color: white;
+	font-size: 0.9vmax;
 }
 
 .thumbs {
@@ -205,8 +208,6 @@ border-color: #ffffff;
 border-style: solid;
 }
 
-.content { color: white;}
-
 .carousel-inner {
 	overflow: hidden;
 }
@@ -215,4 +216,16 @@ border-style: solid;
     width: 10%; 
     height:100%;
     background-size: 100%;
+}
+
+.content a:link,
+.content a:visited,
+.content a:hover {
+	color: #85ADFF;
+	font-family: 'BebasNeue', Calibri, Serif, Ubuntu, Arial;
+}
+
+.content h4,
+.content h3 {
+	font-family: 'Blackout-Midnight', Serif, Arial, Ubuntu;
 }
