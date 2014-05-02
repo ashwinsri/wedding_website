@@ -1,54 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-    <ul class="nav nav-tabs" style="width:100%">
-  <li class="active">
-    <a href="#rsvp1" data-toggle="tab">Chennai Wedding</a>
-  </li>
-  <li>
-    <a href="#rsvp2" data-toggle="tab">Seattle Party</a>
-  </li>
+<ul class="nav nav-tabs" style="width:100%">
+	<li class="active">
+		<a href="#rsvp1" data-toggle="tab"><h3>Chennai Wedding</h3></a>
+	</li>
+	<li>
+		<a href="#rsvp2" data-toggle="tab"><h3>Seattle Party</h3></a>
+	</li>
 </ul>
-
-
 <div class="tab-content">
-  <div class="tab-pane active" id="rsvp1">
-    <form name="input" action="demo_form_action.asp" method="get">
-      <br>
-        <br>
-      Name: <input type="text" name="fullname" value="" />
-      <br />
-      Attending?
-      <br />
-      <input type="radio" name="sex" value="yes" />
-      Yes<br />
-      <input type="radio" name="sex" value="no" />
-      No<br />
-      # of Guests <input type="text" name="guests" value="" />
-      <br />
-      <input type="submit" value="Submit" />
-    </form>
-    <br />
-    <br />
-  </div>
-  <div class="tab-pane" id="rsvp2">
-    <form name="input" action="demo_form_action.asp" method="get">
-      <br />
-      <br />
-      Name: <input type="text" name="fullname" value="" />
-      <br />
-      Attending?
-      <br />
-      <input type="radio" name="sex" value="yes" />
-      Yes<br />
-      <input type="radio" name="sex" value="no" />
-      No<br />
-      # of Guests <input type="text" name="guests" value="" />
-      <br />
-      <input type="submit" value="Submit" />
-
-    </form>
-    <br />
-    <br />
-
-  </div>
+	<div class="tab-pane active" id="rsvp1">
+		<br>
+		<br>
+		<table>
+			<tbody>
+				<tr>
+					<td>Name:</td> 
+					<td><input type="text" id="fullname" value="" /></td>
+				</tr>
+				<tr>
+					<td>E-Mail:</td> 
+					<td><input type="text" id="fullname" value="" /></td>
+				</tr>
+				<tr>
+					<td>Will you be attending? </td>
+					<td>
+					<select id="attend">
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Will you need accommodation?</td>
+					<td>
+					<select id="accomm">
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
+					</td>
+				</tr>
+				<tr>
+					<td># of Guests</td>
+					<td><input type="text" id="guests" value="" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<p><input type="submit" value="Submit" /></p>
+		<br>
+		<br>
+	</div>
+	<div class="tab-pane" id="rsvp2">
+		<form name="input" action="demo_form_action.asp" method="get">
+			<br>
+			<br>
+			<tr>Name: <input type="text" id="fullname" value="" /></tr>
+			<tr>Will you be attending? 
+			<select>
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</select></tr>
+			<tr>Will you need accommodation?
+			<select>
+				<option value="1">Yes</option>
+				<optionvalue="0">No</option>
+			</select></tr>
+			<tr># of Guests <input type="text" id="guests" value="" /></tr>
+			<tr><input type="submit" value="Submit" /></tr>
+		</form>
+		<br>
+		<br>
+	</div>
 </div>

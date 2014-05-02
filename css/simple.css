@@ -193,6 +193,7 @@ border-bottom-color: transparent;
 
 .content{
 	border-radius: 10px;
+	padding: 25px;
 	overflow:auto;
 	color: white;
 	font-size: 0.9vmax;
@@ -218,9 +219,9 @@ border-style: solid;
     background-size: 100%;
 }
 
-.content a:link,
-.content a:visited,
-.content a:hover {
+.attractions a:link,
+.attractions a:visited,
+.attractions a:hover {
 	color: #85ADFF;
 	font-family: 'BebasNeue', Calibri, Serif, Ubuntu, Arial;
 }
@@ -228,4 +229,22 @@ border-style: solid;
 .content h4,
 .content h3 {
 	font-family: 'Blackout-Midnight', Serif, Arial, Ubuntu;
+}
+
+#rsvp1  table,
+#rsvp1  tbody,
+#rsvp1  tr,
+#rsvp1  td {
+	padding: 10px;
+}
+
+#rsvp1 select,
+#rsvp1  option {
+	color: rgba(1,1,1,1);
+}
+
+#rsvp1 input[type="text"] {
+	width:200px;
+	border-radius: 5px;
+	padding: 5%;
 }

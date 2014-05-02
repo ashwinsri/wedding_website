@@ -61,22 +61,42 @@ $.fn.enPageFns = function()
 		$('.content').fadeOut('fast', function () 
 		{
 			$('.content').css('background-color', 'rgba(0,0,0,0)');
-			$(this).empty();
+			$(this).empty().attr('class','content');
 		});
 	});
 
 	$('#pics').click(function () 
 	{
-	    $(document).getContent('carousel.xml', 'content');	
+	    $(document).getContent('carousel.xml', 'content');
+		$('.content').attr('class','content pics')
 	});
     
 	$('#rsvp').click(function () {
 	    $(document).getContent('rsvp.xml', 'content');
+		$('.content').attr('class','content rsvpform');
 	});
 	
 	$('#info').click(function () {
 	    $(document).getContent('attractions.xml', 'content');
+		$('.content').attr('class','content attractions');
 	});
+	
+	$('#story').click(function () {
+	    $(document).getContent('story.xml', 'content');
+		$('.content').attr('class','content lauustory');
+	});
+	
+	$('#sched').click(function () {
+	    $(document).getContent('wedding.xml', 'content');
+		$('.content').attr('class','content weddingsched');
+	});
+	
+	$('#gb').click(function () {
+	    $(document).getContent('guestbook.xml', 'content');
+		$('.content').attr('class','content guestbook');
+	});
+	
+	
 }
 
 
@@ -96,6 +116,6 @@ $.fn.getContent = function(file, element)
 	})
 	.fail(function(jqXHR, textStatus, errMsg) 
 	{
-		$(classname).css('background-color', 'rgba(0,0,0,0.7)').html(textStatus).fadeIn('fast');
+		$(classname).css('background-color', 'rgba(0,0,0,0.7)').html(errMsg).fadeIn('fast');
 	});
 }
