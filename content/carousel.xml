@@ -11,6 +11,9 @@
     <li data-target="#carousel-example-generic" data-slide-to="6" style="background: url(../pics/thumb_IMG_2658.jpg) no-repeat;"></li>
     <li data-target="#carousel-example-generic" data-slide-to="7" style="background: url(../pics/thumb_IMG_3028.jpg) no-repeat;"></li>
     <li data-target="#carousel-example-generic" data-slide-to="8" style="background: url(../pics/thumb_IMG_3029.jpg) no-repeat;"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="9" style="background: url(../pics/thumb_IMG_228.jpg) no-repeat;"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="10" style="background: url(../pics/thumb_IMG_1137.jpg) no-repeat;"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="11" style="background: url(../pics/thumb_IMG_2751.jpg) no-repeat;"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -42,7 +45,15 @@
     <div id="pic9" class="item ">
       <img src = "pics/IMG_3029.jpg" />
     </div>
-    
+    <div id="pic10" class="item ">
+      <img src = "pics/IMG_228.jpg" />
+    </div>
+    <div id="pic11" class="item ">
+      <img src = "pics/IMG_1137.jpg" />
+    </div>
+    <div id="pic12" class="item ">
+      <img src = "pics/IMG_2751.jpg" />
+    </div>
   </div>
 
   <!-- Controls -->
