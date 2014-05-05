@@ -247,6 +247,7 @@ border-style: solid;
 	width:200px;
 	border-radius: 5px;
 	padding: 5%;
+	color: #000;
 }
 .rsvpform a:link,
 .rsvpform a:visited,
@@ -302,8 +303,8 @@ border-style: solid;
 	top:2px;
 }
 
-#submitChennai:disabled,
-#submitSeattle:disabled{
+#submitChennai_Disabled,
+#submitSeattle_Disabled{
 	-moz-box-shadow:inset 0px 1px 0px 0px #949294;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #949294;
 	box-shadow:inset 0px 1px 0px 0px #949294;

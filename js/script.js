@@ -77,13 +77,6 @@ $.fn.enPageFns = function()
 	$('#rsvp').click(function () {
 	    $(this).getContent('rsvp.xml', 'content');
 		$('.content').attr('class','col-lg-9 col-md-9 col-sm-9 col-xs-9 content flash rsvpform');
-		setTimeout(function()
-		{
-			$("#submitChennai").prop("disabled",false);
-			$("#submitChennai").click(function() {
-				alert($(this).attr('id'));
-			});
-		}, 3000);
 	});
 	
 	$('#info').click(function () {
@@ -126,6 +119,18 @@ $.fn.getContent = function(file, element)
 	{
 		$(classname).css('background-color', 'rgba(0,0,0,0.7)').html(errMsg).fadeIn('fast');
 	});
+	
+	if($(this).attr('id') == 'rsvp')
+	{
+		
+		var fullname = $('rsvp').find('#fullname').css('background-color','#ffa');
+		//console.log("fullname value = "+fullname);
+		/*if(($('#fullname').val().length > 0) && ($('#email').val().length > 0))
+		{
+			$("#submitChennai_Disabled").prop("id","submitChennai");
+			$("#submitSeattle_Disabled").prop("id","submitSeattle");
+		} */
+	}
 }
 
 /*******************************************
@@ -135,6 +140,8 @@ Desc: Saves RSVP form data to an XML file.
 *******************************************/
 $.fn.sendRSVP = function()
 {
+		
+		
 		$(this).prop("disabled",true);
 		console.log("RSVP Btn. clicked!");
 }

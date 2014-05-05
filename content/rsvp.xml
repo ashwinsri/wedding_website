@@ -20,7 +20,7 @@
 				</tr>
 				<tr>
 					<td>E-Mail:</td> 
-					<td><input type="text" id="fullname" value="" /></td>
+					<td><input type="text" id="email" value="" /></td>
 				</tr>
 				<tr>
 					<td>Will you be attending? </td>
@@ -46,7 +46,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<p><input type="button" value="Submit" id="submitChennai" disabled = "true"/></p>
+		<p><input type="button" value="Submit" id="submitChennai_Disabled" /></p>
 		<br>
 		<br>
 	</div>
@@ -61,7 +61,7 @@
 				</tr>
 				<tr>
 					<td>E-Mail:</td> 
-					<td><input type="text" id="fullname" value="" /></td>
+					<td><input type="text" id="email" value="" /></td>
 				</tr>
 				<tr>
 					<td>Will you be attending? </td>
@@ -87,7 +87,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<p><input type="button" value="Submit" id="submitSeattle" disabled = "true"/></p>
+		<p><input type="button" value="Submit" id="submitSeattle_Disabled"/></p>
 		<br>
 		<br>
 	</div>
