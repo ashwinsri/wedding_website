@@ -1,3 +1,6 @@
+var RSVPTemplate = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><RSVPEntry></RSVPEntry>";
+var RSVPChennai = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><RSVPEntry></RSVPEntry>";
+var RSVPSeattle = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><RSVPEntry></RSVPEntry>";
 
 $(".container").css('display', 'none');
 
@@ -61,42 +64,47 @@ $.fn.enPageFns = function()
 		$('.content').fadeOut('fast', function () 
 		{
 			$('.content').css('background-color', 'rgba(0,0,0,0)');
-			$(this).empty().attr('class','content');
+			$(this).empty().attr('class','col-lg-9 col-md-9 col-sm-9 col-xs-9 content flash');
 		});
 	});
 
 	$('#pics').click(function () 
 	{
 	    $(document).getContent('carousel.xml', 'content');
-		$('.content').attr('class','content pics')
+		$('.content').attr('class','col-lg-9 col-md-9 col-sm-9 col-xs-9 content flash pics')
 	});
     
 	$('#rsvp').click(function () {
-	    $(document).getContent('rsvp.xml', 'content');
-		$('.content').attr('class','content rsvpform');
+	    $(this).getContent('rsvp.xml', 'content');
+		$('.content').attr('class','col-lg-9 col-md-9 col-sm-9 col-xs-9 content flash rsvpform');
+		setTimeout(function()
+		{
+			$("#submitChennai").prop("disabled",false);
+			$("#submitChennai").click(function() {
+				alert($(this).attr('id'));
+			});
+		}, 3000);
 	});
 	
 	$('#info').click(function () {
 	    $(document).getContent('attractions.xml', 'content');
-		$('.content').attr('class','content attractions');
+		$('.content').attr('class','col-lg-9 col-md-9 col-sm-9 col-xs-9 content flash attractions');
 	});
 	
 	$('#story').click(function () {
 	    $(document).getContent('story.xml', 'content');
-		$('.content').attr('class','content lauustory');
+		$('.content').attr('class','col-lg-9 col-md-9 col-sm-9 col-xs-9 content flash lauustory');
 	});
 	
 	$('#sched').click(function () {
 	    $(document).getContent('wedding.xml', 'content');
-		$('.content').attr('class','content weddingsched');
+		$('.content').attr('class','col-lg-9 col-md-9 col-sm-9 col-xs-9 content flash weddingsched');
 	});
 	
 	$('#gb').click(function () {
 	    $(document).getContent('guestbook.xml', 'content');
-		$('.content').attr('class','content guestbook');
+		$('.content').attr('class','col-lg-9 col-md-9 col-sm-9 col-xs-9 content flash guestbook');
 	});
-	
-	
 }
 
 
@@ -118,4 +126,15 @@ $.fn.getContent = function(file, element)
 	{
 		$(classname).css('background-color', 'rgba(0,0,0,0.7)').html(errMsg).fadeIn('fast');
 	});
+}
+
+/*******************************************
+Name: sendRSVP
+Args: --
+Desc: Saves RSVP form data to an XML file.
+*******************************************/
+$.fn.sendRSVP = function()
+{
+		$(this).prop("disabled",true);
+		console.log("RSVP Btn. clicked!");
 }
