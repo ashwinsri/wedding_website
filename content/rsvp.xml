@@ -12,6 +12,7 @@
 	<div class="tab-pane active" id="rsvp1">
 		<br>
 		<br>
+		<form name="formrsvp" method="post" action="rsvpsubmit.php">
 		<table>
 			<tbody>
 				<tr>
@@ -20,7 +21,7 @@
 				</tr>
 				<tr>
 					<td>E-Mail:</td> 
-					<td><input type="text" id="fullname" value="" /></td>
+					<td><input type="text" id="email" value="" /></td>
 				</tr>
 				<tr>
 					<td>Will you be attending? </td>
@@ -46,29 +47,52 @@
 				</tr>
 			</tbody>
 		</table>
-		<p><input type="submit" value="Submit" /></p>
+		<p><input type="submit" value="Submit" id="submitChennai" disabled= "true"/></p>
 		<br>
 		<br>
+		</form>
 	</div>
 	<div class="tab-pane" id="rsvp2">
-		<form name="input" action="demo_form_action.asp" method="get">
-			<br>
-			<br>
-			<tr>Name: <input type="text" id="fullname" value="" /></tr>
-			<tr>Will you be attending? 
-			<select>
-				<option value="1">Yes</option>
-				<option value="0">No</option>
-			</select></tr>
-			<tr>Will you need accommodation?
-			<select>
-				<option value="1">Yes</option>
-				<optionvalue="0">No</option>
-			</select></tr>
-			<tr># of Guests <input type="text" id="guests" value="" /></tr>
-			<tr><input type="submit" value="Submit" /></tr>
+		<br>
+		<br>
+		<form name="formrsvp2" method="post" action="rsvpsubmit.php">
+		<table>
+			<tbody>
+				<tr>
+					<td>Name:</td> 
+					<td><input type="text" id="fullname" value="" /></td>
+				</tr>
+				<tr>
+					<td>E-Mail:</td> 
+					<td><input type="text" id="email" value="" /></td>
+				</tr>
+				<tr>
+					<td>Will you be attending? </td>
+					<td>
+					<select id="attend">
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Will you need accommodation?</td>
+					<td>
+					<select id="accomm">
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
+					</td>
+				</tr>
+				<tr>
+					<td># of Guests</td>
+					<td><input type="text" id="guests" value="" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<p><input type="submit" value="Submit" id="submitSeattle" disabled= "true" /></p>
+		<br>
+		<br>
 		</form>
-		<br>
-		<br>
 	</div>
 </div>
