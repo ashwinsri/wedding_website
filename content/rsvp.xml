@@ -12,21 +12,21 @@
 	<div class="tab-pane active" id="rsvp1">
 		<br>
 		<br>
-		<form name="formrsvp" method="post" action="rsvpsubmit.php">
+		<form name="formrsvp" method="get" action="rsvpsubmit.php">
 		<table>
 			<tbody>
 				<tr>
 					<td>Name:</td> 
-					<td><input type="text" id="fullname" value="" /></td>
+					<td><input type="text" name="name" id="fullname" value="" /></td>
 				</tr>
 				<tr>
 					<td>E-Mail:</td> 
-					<td><input type="text" id="email" value="" /></td>
+					<td><input type="text" name="email" id="email" value="" /></td>
 				</tr>
 				<tr>
 					<td>Will you be attending? </td>
 					<td>
-					<select id="attend">
+					<select name="attending" id="attend">
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -35,7 +35,7 @@
 				<tr>
 					<td>Will you need accommodation?</td>
 					<td>
-					<select id="accomm">
+					<select name="accommodation" id="accomm">
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -43,11 +43,11 @@
 				</tr>
 				<tr>
 					<td># of Guests</td>
-					<td><input type="text" id="guests" value="" /></td>
+					<td><input name="guests" type="text" id="guests" value="" /></td>
 				</tr>
 			</tbody>
 		</table>
-		<p><input type="submit" value="Submit" id="submitChennai" disabled= "true"/></p>
+		<p><input type="submit" value="Submit" id="submitChennai" /></p>
 		<br>
 		<br>
 		</form>
@@ -55,21 +55,21 @@
 	<div class="tab-pane" id="rsvp2">
 		<br>
 		<br>
-		<form name="formrsvp2" method="post" action="rsvpsubmit.php">
+		<form name="formrsvp2" method="get" action="rsvpsubmit.php">
 		<table>
 			<tbody>
 				<tr>
 					<td>Name:</td> 
-					<td><input type="text" id="fullname" value="" /></td>
+					<td><input type="text" name="name" id="fullname" value="" /></td>
 				</tr>
 				<tr>
 					<td>E-Mail:</td> 
-					<td><input type="text" id="email" value="" /></td>
+					<td><input type="text" name="email" id="email" value="" /></td>
 				</tr>
 				<tr>
 					<td>Will you be attending? </td>
 					<td>
-					<select id="attend">
+					<select name="attending" id="attend">
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -78,7 +78,7 @@
 				<tr>
 					<td>Will you need accommodation?</td>
 					<td>
-					<select id="accomm">
+					<select name="accommodation" id="accomm">
 						<option value="1">Yes</option>
 						<option value="0">No</option>
 					</select>
@@ -86,11 +86,11 @@
 				</tr>
 				<tr>
 					<td># of Guests</td>
-					<td><input type="text" id="guests" value="" /></td>
+					<td><input type="text" name="guests" id="guests" value="" /></td>
 				</tr>
 			</tbody>
 		</table>
-		<p><input type="submit" value="Submit" id="submitSeattle" disabled= "true" /></p>
+		<p><input type="submit" value="Submit" id="submitSeattle" /></p>
 		<br>
 		<br>
 		</form>

@@ -107,57 +107,17 @@ Args: file
 Desc: Generic content-get function. Saves 
 content to div defined by 'element' class.
 *******************************************/
-$.fn.getContent = function(file, element)
-{
-	var classname = '.'+element;
-	$.post("test.php", { filename: file })
-	.done(function (data) 
-	{
-		$(classname).css('background-color', 'rgba(0,0,0,0.7)').html(data.toString()).fadeIn('fast');
-	})
-	.fail(function(jqXHR, textStatus, errMsg) 
-	{
-		$(classname).css('background-color', 'rgba(0,0,0,0.7)').html(errMsg).fadeIn('fast');
-	});
-	
-	if($(this).attr('id') == 'rsvp')
-	{
-		setTimeout(function() {
-			console.log("calling validate!");
-			$('#rsvp1').validateForm();
-			$('#rsvp2').validateForm();
-			//$('.rsvpform').sendRSVP();
-		}, 1000);
-	}
-}
+$.fn.getContent = function(file, element) {
+    var classname = '.' + element;
+    $.post("test.php", { filename: file })
+        .done(function(data) {
+            $(classname).css('background-color', 'rgba(0,0,0,0.7)').html(data.toString()).fadeIn('fast');
+        })
+        .fail(function(jqXHR, textStatus, errMsg) {
+            $(classname).css('background-color', 'rgba(0,0,0,0.7)').html(errMsg).fadeIn('fast');
+        });
 
-
-$.fn.validateForm = function() 
-{	
-	var id = $(this).attr("id");
-	var submitBtnID = '#';
-	if(id == 'rsvp1')
-	{
-		submitBtnID += 'submitChennai';
-	}
-	else
-	{
-		submitBtnID += 'submitSeattle';
-	}
-	
-	$(this).change(function() {
-		console.log('something changed.');
-		if( $('#fullname').val() != '' &&  $('#email').val() != '' &&  $('#guests').val() != '')
-		{
-			console.log('click submit!');
-			$(submitBtnID).prop("disabled",false);
-		}
-		else
-		{
-			console.log("Something's empty.");
-		}
-	});
-}
+};
 
 
 /*******************************************
