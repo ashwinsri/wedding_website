@@ -122,32 +122,41 @@ $.fn.getContent = function(file, element)
 	
 	if($(this).attr('id') == 'rsvp')
 	{
-		$(this).validateForm();
-		$(this).sendRSVP();
+		setTimeout(function() {
+			console.log("calling validate!");
+			$('#rsvp1').validateForm();
+			$('#rsvp2').validateForm();
+			//$('.rsvpform').sendRSVP();
+		}, 1000);
 	}
 }
 
 
 $.fn.validateForm = function() 
-{
-    /*$('#rsvp table > input').keyup(function() {
-
-        var empty = false;
-        $('form > input').each(function() {
-            if ($(this).val() == '') {
-                empty = true;
-            }
-        });
-
-        if (empty) {
-            $('#register').attr('disabled', 'disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
-        } else {
-            $('#register').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
-        }
-    }); */
+{	
+	var id = $(this).attr("id");
+	var submitBtnID = '#';
+	if(id == 'rsvp1')
+	{
+		submitBtnID += 'submitChennai';
+	}
+	else
+	{
+		submitBtnID += 'submitSeattle';
+	}
 	
-	console.log("Form validated!")
-	
+	$(this).change(function() {
+		console.log('something changed.');
+		if( $('#fullname').val() != '' &&  $('#email').val() != '' &&  $('#guests').val() != '')
+		{
+			console.log('click submit!');
+			$(submitBtnID).prop("disabled",false);
+		}
+		else
+		{
+			console.log("Something's empty.");
+		}
+	});
 }
 
 
@@ -158,8 +167,6 @@ Desc: Saves RSVP form data to an XML file.
 *******************************************/
 $.fn.sendRSVP = function()
 {
-		
-		
-		$(this).prop("disabled",true);
+		//$(this).prop("disabled",true);
 		console.log("RSVP Btn. clicked!");
 }

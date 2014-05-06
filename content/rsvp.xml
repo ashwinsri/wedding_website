@@ -12,6 +12,7 @@
 	<div class="tab-pane active" id="rsvp1">
 		<br>
 		<br>
+		<form name="formrsvp" method="post" action="rsvpsubmit.php">
 		<table>
 			<tbody>
 				<tr>
@@ -46,13 +47,15 @@
 				</tr>
 			</tbody>
 		</table>
-		<p><input type="button" value="Submit" id="submitChennai_Disabled" /></p>
+		<p><input type="submit" value="Submit" id="submitChennai" disabled= "true"/></p>
 		<br>
 		<br>
+		</form>
 	</div>
 	<div class="tab-pane" id="rsvp2">
 		<br>
 		<br>
+		<form name="formrsvp2" method="post" action="rsvpsubmit.php">
 		<table>
 			<tbody>
 				<tr>
@@ -87,8 +90,9 @@
 				</tr>
 			</tbody>
 		</table>
-		<p><input type="button" value="Submit" id="submitSeattle_Disabled"/></p>
+		<p><input type="submit" value="Submit" id="submitSeattle" disabled= "true" /></p>
 		<br>
 		<br>
+		</form>
 	</div>
 </div>
