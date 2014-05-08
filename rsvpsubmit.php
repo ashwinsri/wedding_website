@@ -1,6 +1,6 @@
 <?php
 
-$filename = "rsvpdata.xml";
+$filename = $_POST["id"]. ".xml";
 
 if (file_exists($filename)) 
 {
@@ -16,13 +16,12 @@ $xml = new SimpleXmlElement($rawFile);
 
 // Add the new rsvp entry as a child node
 $entry = $xml->entries->addChild("entry");
-$entry->addChild("name", $_GET["name"]);
-$entry->addChild("email", $_GET["email"]);
-$entry->addChild("attending", $_GET["attending"]);
-$entry->addChild("guests", $_GET["guests"]);
-$entry->addChild("accommodation", $_GET["accommodation"]);
-//$entry->addChild("arrivaldate", $_GET["arrivaldate"]);
-//$entry->addChild("departuredate", $_GET["departuredate"]);
+$entry->addChild("name", $_POST["name"]);
+$entry->addChild("email", $_POST["email"]);
+$entry->addChild("attending", $_POST["attending"]);
+$entry->addChild("guests", $_POST["guests"]);
+$entry->addChild("accommodation", $_POST["accommodation"]);
+
 
 // Write the entire blog to the file
 $file = fopen($filename, 'w');

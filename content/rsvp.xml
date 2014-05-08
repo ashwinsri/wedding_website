@@ -12,7 +12,7 @@
 	<div class="tab-pane active" id="rsvp1">
 		<br>
 		<br>
-		<form name="formrsvp" method="get" action="rsvpsubmit.php">
+		<form id="rsvpChennai" method="get" action="" >
 		<table>
 			<tbody>
 				<tr>
@@ -47,7 +47,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<p><input type="submit" value="Submit" id="submitChennai" /></p>
+		<p><input type="submit" value="Submit" id="rsvpChennai" /></p>
 		<br>
 		<br>
 		</form>
@@ -55,7 +55,7 @@
 	<div class="tab-pane" id="rsvp2">
 		<br>
 		<br>
-		<form name="formrsvp2" method="get" action="rsvpsubmit.php">
+		<form id="rsvpSeattle" method="get" action="">
 		<table>
 			<tbody>
 				<tr>
@@ -90,9 +90,32 @@
 				</tr>
 			</tbody>
 		</table>
-		<p><input type="submit" value="Submit" id="submitSeattle" /></p>
+		<p><input type="submit" value="Submit" id="rsvpSeattle" /></p>
 		<br>
 		<br>
 		</form>
 	</div>
 </div>
+
+<script>
+
+  $("form").submit(function(e){
+  e.preventDefault();
+  var formId = $(this).attr('id')
+
+  var thisForm = $("form[name='formId']");
+  var fullname = $("#" + formId + " input[name='name']").val();
+  var em = $("#" + formId + " input[name='email']").val();
+  var att = $("#" + formId + " select[name='attending']").val();
+  var g = $("#" + formId + " input[name='guests']").val();
+  var acc = $("#" + formId + " select[name='accommodation']").val();
+  $.ajax({
+  type: "POST",
+  url: "rsvpsubmit.php",
+  data: { id: formId , name: fullname , email: em, attending: att, guests: g, accommodation: acc },
+  success: function( data ) {
+  alert( "Form Submitted: " + data );
+  }});
+  });
+
+</script>
