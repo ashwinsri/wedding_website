@@ -118,10 +118,7 @@
   $('#success').text( "Form Submitted: " + data );
   setTimeout(function() 
   {
-	$('#success').fadeOut('slow', function ()
-	{
-		$(this).empty();
-	})
+	$('#success').empty();
   }, 5000);
   }});
   });

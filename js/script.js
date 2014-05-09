@@ -141,7 +141,7 @@ $.fn.validateRSVPForm = function(id)
 	var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 	
 	var str = "submit"+id.substring(5, 12);
-	$(this).on('change', function()
+	$(this).on('keyup', function()
 	{
 		var $Parent = $(this);
 		console.log('Something changed.');
