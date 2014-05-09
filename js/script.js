@@ -116,17 +116,62 @@ $.fn.getContent = function(file, element) {
         .fail(function(jqXHR, textStatus, errMsg) {
             $(classname).css('background-color', 'rgba(0,0,0,0.7)').html(errMsg).fadeIn('fast');
         });
-
+	
+	if($(this).attr('id') == 'rsvp')
+	{
+		setTimeout(function()
+		{
+			$('#rsvp1').validateRSVPForm('#rsvpChennai');
+			$('#rsvp2').validateRSVPForm('#rsvpSeattle');
+		}, 1000);
+	}
 };
 
 
 /*******************************************
-Name: sendRSVP
+Name: validateRSVPForm
 Args: --
-Desc: Saves RSVP form data to an XML file.
+Desc: validates RSVP form data before sending.
 *******************************************/
-$.fn.sendRSVP = function()
+$.fn.validateRSVPForm = function(id)
 {
-		//$(this).prop("disabled",true);
-		console.log("RSVP Btn. clicked!");
+	var name = false;
+	var email = false;
+	var guests = false;
+	var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+	
+	var str = "submit"+id.substring(5, 12);
+	$(this).on('change', function()
+	{
+		var $Parent = $(this);
+		console.log('Something changed.');
+		
+		if($(id + ' #fullname').val().length > 0)
+		{
+			name = true;
+		}
+		
+		if(($(id + ' #email').val().length > 0) && emailReg.test($('#email').val()))
+		{
+			email = true;
+		}
+		
+		if($(id + ' #guests').val().length > 0)
+		{
+			guests = true;
+		}
+		
+		if(name && email && guests)
+		{
+			$(id).find("input[type='submit']").attr('class', str).prop('disabled', false);
+			$(id).find("input[type='submit']").on('click', function()
+			{
+				setTimeout(function()
+				{
+					$(id).find("input[type='submit']").prop('disabled', true);
+					$(id).find("input[type='submit']").attr('class', str+'_Disabled');
+				}, 1000);
+			});
+		}
+	});
 }

@@ -47,7 +47,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<p><input type="submit" value="Submit" id="rsvpChennai" /></p>
+		<p><input type="submit" value="Submit" id="rsvpChennai" class="submitChennai_Disabled" disabled="true" /></p>
 		<br>
 		<br>
 		</form>
@@ -90,11 +90,12 @@
 				</tr>
 			</tbody>
 		</table>
-		<p><input type="submit" value="Submit" id="rsvpSeattle" /></p>
+		<p><input type="submit" value="Submit" id="rsvpSeattle" class="submitSeattle_Disabled" disabled="true" /></p>
 		<br>
 		<br>
 		</form>
 	</div>
+	<p id="success"></p>
 </div>
 
 <script>
@@ -114,7 +115,14 @@
   url: "rsvpsubmit.php",
   data: { id: formId , name: fullname , email: em, attending: att, guests: g, accommodation: acc },
   success: function( data ) {
-  alert( "Form Submitted: " + data );
+  $('#success').text( "Form Submitted: " + data );
+  setTimeout(function() 
+  {
+	$('#success').fadeOut('slow', function ()
+	{
+		$(this).empty();
+	})
+  }, 5000);
   }});
   });
 
