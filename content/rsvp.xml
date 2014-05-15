@@ -42,7 +42,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td># of Guests</td>
+					<td># of People in your party (including you)</td>
 					<td><input name="guests" type="text" id="guests" value="" /></td>
 				</tr>
 			</tbody>
@@ -85,7 +85,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td># of Guests</td>
+					<td># of People in your party (including you)</td>
 					<td><input type="text" name="guests" id="guests" value="" /></td>
 				</tr>
 			</tbody>

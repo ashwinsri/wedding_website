@@ -1,3 +1,5 @@
+var containerDiv = $('<div class = "containerDiv"></div>');
+
 $(document).ready(function () {
 	$(this).enableAdminFns();
 });
@@ -23,18 +25,18 @@ $.fn.enableAdminFns = function()
 	
 	$('#chennai_entries').click(function() {
 		
+		$('.admin_content').empty();
 		$('#seattle_entries').css('font-weight', 'normal').css('text-decoration','none');
 		$(this).css('font-weight', 'bold').css('text-decoration','underline');
 		$(this).getRSVPXML();
-		//$('.admin_content').attr('class', 'col-lg-9 col-md-9 col-sm-9 col-xs-9 admin_content');
 	});
 	
 	$('#seattle_entries').click(function() {
 		
+		$('.admin_content').empty();
 		$('#chennai_entries').css('font-weight', 'normal').css('text-decoration','none');
 		$(this).css('font-weight', 'bold').css('text-decoration','underline');
 		$(this).getRSVPXML();
-		//$('.admin_content').attr('class', 'col-lg-9 col-md-9 col-sm-9 col-xs-9 admin_content');
 	});
 	
 	
@@ -62,6 +64,7 @@ $.fn.getRSVPXML = function()
 
 function xmlParser(xml) {
 	
+	var totalResponses = 0, totalAttending = 0, totalAccomm = 0;
 	var tableID = $(this).attr('id');
 	
 	var table = $('<table id="' + tableID + '" class="table table-bordered table-condensed"></table>');
@@ -70,9 +73,11 @@ function xmlParser(xml) {
 	table.append(tableHeader);
 	
 	var tableBody = $('<tbody></tbody>');
-	
+	var statsDiv = $('<br><div id = "stats"></div>');
+	var containerDiv = $('<div class = "containerDiv"></div>'); 
 	$(xml).find('entry').each(function()
 	{
+		totalResponses++;
 		var	tableRowEntry = $('<tr></tr>');
 		tableRowEntry.append('<td>'+$(this).find('name').text()+'</td>');
 		tableRowEntry.append('<td>'+$(this).find('email').text()+'</td>');
@@ -81,12 +86,27 @@ function xmlParser(xml) {
 		tableRowEntry.append('<td>'+$(this).find('guests').text()+'</td>');
 		
 		tableBody.append(tableRowEntry);
+		
+		/*Stats*/
+		if($(this).find('attending').text() == '1')
+		{	
+			totalAttending+=parseInt($(this).find('guests').text());
+			
+			//If attendee requires accommodation
+			if($(this).find('accommodation').text() == '1')
+			{
+				totalAccomm += parseInt($(this).find('guests').text());
+			}
+		}
 	});
 	
 	table.append(tableBody).css('background-color','#400040').css('border-radius','5px').css('color','white').css('border', '0px').css('font-weight','strong');
 	
 	setTimeout(function() 
 	{
-		$('.admin_content').html(table);
+		$('.admin_content').append(table).fadeIn("slow");
+		setTimeout(function() {
+		$('.admin_content').append('<div id="stats">Total Responses = '+totalResponses+'<br>Attending = '+totalAttending+'<br>Total people needing accommodation= '+totalAccomm+'<br></div>').fadeIn("slow");
+		}, 100);
 	}, 500);
 }

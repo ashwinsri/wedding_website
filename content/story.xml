@@ -8,12 +8,11 @@
     <li data-target="#carousel-example-generic" data-slide-to="3"></li>
     <li data-target="#carousel-example-generic" data-slide-to="4"></li>
     <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="8"></li>
     <li data-target="#carousel-example-generic" data-slide-to="9"></li>
     <li data-target="#carousel-example-generic" data-slide-to="10"></li>
     <li data-target="#carousel-example-generic" data-slide-to="11"></li>
+	<li data-target="#carousel-example-generic" data-slide-to="12"></li>
+	<li data-target="#carousel-example-generic" data-slide-to="13"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -35,12 +34,6 @@
     </div>
     <div id="pic6" class="item ">
       <img src = "pics/story/image5.jpg" />
-    </div>
-    <div id="pic7" class="item ">
-      <img src = "pics/story/image6.jpg" />
-    </div>
-    <div id="pic8" class="item ">
-      <img src = "pics/story/image7.jpg" />
     </div>
     <div id="pic9" class="item ">
       <img src = "pics/story/image9.jpg" />

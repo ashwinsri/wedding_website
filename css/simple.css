@@ -345,3 +345,12 @@ border-style: solid;
   height: 500px;
   max-width: none;
 }
+
+#stats {
+	color: white;
+	font-weight: bold;
+	font-family: Calibri, Ubuntu, Arial;
+	background-color: rgba(64,0,64,0.7);
+	display: inline-block;
+	padding: 1.5em;
+}
