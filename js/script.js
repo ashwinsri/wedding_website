@@ -146,39 +146,83 @@ $.fn.validateRSVPForm = function(id)
 		var $Parent = $(this);
 		console.log('Something changed.');
 		
-		if($(id + ' #fullname').val().length > 0)
+		//Checking Name
+		if($(id + ' #fullname').val().length > 2)
 		{
+			console.log("I'm checking mail.");
 			name = true;
+			$(id + ' #fullname').css('background-color', '#D4FFFF');
+		}
+		else
+		{
+			console.log("I'm checking mail.");
+			name = false;
+			$(id + ' #fullname').css('background-color', '#FFD4D4');
+			$(id).find("input[type='submit']").attr('class', str+'_Disabled').prop('disabled', true);
 		}
 		
-		if(($(id + ' #email').val().length > 0) && emailReg.test($('#email').val()))
+		//Checking e-mail
+		if(($(id + ' #email').val().length > 0))
 		{
-			email = true;
-		}
-		
-		if($(id + ' #guests').val().length > 0)
-		{
-			if($.isNumeric($(id + ' #guests').val()))
+			console.log("I'm checking email.");
+			if(emailReg.test($('#email').val()))
 			{
-				guests = true;
+				email = true;
+				$(id + ' #email').css('background-color', '#D4FFFF');
 			}
 			else
 			{
-				guests = false;
+				email = false;
+				$(id + ' #email').css('background-color', '#FFD4D4');
+				$(id).find("input[type='submit']").attr('class', str+'_Disabled').prop('disabled', true);
 			}
 		}
-		
-		if(name && email && guests)
+		else
 		{
-			$(id).find("input[type='submit']").attr('class', str).prop('disabled', false);
-			$(id).find("input[type='submit']").on('click', function()
-			{
-				setTimeout(function()
-				{
-					$(id).find("input[type='submit']").prop('disabled', true);
-					$(id).find("input[type='submit']").attr('class', str+'_Disabled');
-				}, 1000);
-			});
+			console.log("I'm checking email.");
+			email = false;
+			$(id + ' #email').css('background-color', '#FFD4D4');
+			$(id).find("input[type='submit']").attr('class', str+'_Disabled').prop('disabled', true);
 		}
+		
+		//Checking guests
+		if($(id + ' #guests').val().length > 0)
+		{
+			console.log("I'm checking guests.");
+			if($.isNumeric($(id + ' #guests').val()))
+			{
+				guests = true;
+				$(id + ' #guests').css('background-color', '#D4FFFF');
+			}
+			else
+			{
+				$(id + ' #guests').css('background-color', '#FFD4D4');
+				guests = false;
+				$(id).find("input[type='submit']").attr('class', str+'_Disabled').prop('disabled', true);
+			}
+		}
+		else
+		{
+			console.log("I'm checking guests.");
+			$(id + ' #guests').css('background-color', '#FFD4D4');
+			guests = false;
+			$(id).find("input[type='submit']").attr('class', str+'_Disabled').prop('disabled', true);
+		}
+
+		setTimeout(function()
+		{
+			if(name && email && guests)
+			{
+				$(id).find("input[type='submit']").attr('class', str).prop('disabled', false);
+				$(id).find("input[type='submit']").on('click', function()
+				{
+					setTimeout(function()
+					{
+						$(id).find("input[type='submit']").prop('disabled', true);
+						$(id).find("input[type='submit']").attr('class', str+'_Disabled');
+					}, 100);
+				});
+			}
+		}, 100);
 	});
 }
