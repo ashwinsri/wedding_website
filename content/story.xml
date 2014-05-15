@@ -61,14 +61,17 @@
   </a>
 </div>
 <script type="text/javascript">
-  var w = $(".carousel-inner").width();
-  $(".carousel-inner").height(w*.68);
+	setTimeout(function() 
+	{
+		var w = $(".carousel-inner").width();
+		$(".carousel-inner").height(w* 0.75);
 
-jQuery(document).bind('keyup', function(e) {
-    if (e.which==39) {
-        jQuery('#carousel-example-generic').carousel('next');
-    } else if (e.which==37) {
-        jQuery('#carousel-example-generic').carousel('prev');
-    }
-});
+		jQuery(document).bind('keyup', function(e) {
+			if (e.which==39) {
+				jQuery('#carousel-example-generic').carousel('next');
+			} else if (e.which==37) {
+				jQuery('#carousel-example-generic').carousel('prev');
+			}
+		});
+	}, 250);
 </script>
