@@ -22,10 +22,6 @@ $entry->addChild("attending", $_POST["attending"]);
 $entry->addChild("guests", $_POST["guests"]);
 $entry->addChild("accommodation", $_POST["accommodation"]);
 
-//Format XML (hopefully) - AS
-$xml->formatOutput = TRUE;
-$xml->saveXml();
-
 // Write the entire blog to the file
 $file = fopen($filename, 'w');
 fwrite($file, $xml->asXML());

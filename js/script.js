@@ -185,6 +185,18 @@ $.fn.validateRSVPForm = function(id)
 			$(id).find("input[type='submit']").attr('class', str+'_Disabled').prop('disabled', true);
 		}
 		
+		//Checking attending
+		if($(id + ' #attend').find(":selected").val() == 0)
+		{
+			console.log("I'm checking attending");
+			$(id + ' #accomm').prop("disabled", true);
+		}
+		else if($(id + ' #attend').find(":selected").val() == 1)
+		{
+			console.log("I'm checking attending");
+			$(id + ' #accomm').prop("disabled", false);
+		}
+		
 		//Checking guests
 		if($(id + ' #guests').val().length > 0)
 		{
@@ -213,9 +225,19 @@ $.fn.validateRSVPForm = function(id)
 		{
 			if(name && email && guests)
 			{
+				$(window).keydown(function(event)
+				{
+					if(event.keyCode == 13)
+					{
+						event.preventDefault();
+						return false;
+					}
+				});
+				
 				$(id).find("input[type='submit']").attr('class', str).prop('disabled', false);
 				$(id).find("input[type='submit']").on('click', function()
 				{
+					$(id).find("input[type='submit']").unbind('click');
 					setTimeout(function()
 					{
 						$(id).find("input[type='submit']").prop('disabled', true);
