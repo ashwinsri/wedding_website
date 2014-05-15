@@ -158,7 +158,14 @@ $.fn.validateRSVPForm = function(id)
 		
 		if($(id + ' #guests').val().length > 0)
 		{
-			guests = true;
+			if($.isNumeric($(id + ' #guests').val()))
+			{
+				guests = true;
+			}
+			else
+			{
+				guests = false;
+			}
 		}
 		
 		if(name && email && guests)
