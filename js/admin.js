@@ -68,7 +68,7 @@ function xmlParser(xml) {
 	var tableID = $(this).attr('id');
 	
 	var table = $('<table id="' + tableID + '" class="table table-bordered table-condensed"></table>');
-	var tableHeader = $('<thead><tr><th>Name</th><th>E-Mail</th><th>Attending</th><th>Accommodation</th><th>Guests</th></tr></thead>');
+	var tableHeader = $('<thead><tr><th></th><th>Name</th><th>E-Mail</th><th>Attending</th><th>Accommodation</th><th>Guests</th></tr></thead>');
 	
 	table.append(tableHeader);
 	
@@ -79,6 +79,7 @@ function xmlParser(xml) {
 	{
 		totalResponses++;
 		var	tableRowEntry = $('<tr></tr>');
+		(($(this).find('attending').text() == '0') ? tableRowEntry.append('<td><img src = "pics/icons/no.png" /></td>') :  tableRowEntry.append('<td><img src = "pics/icons/yes.png" /></td>'));
 		tableRowEntry.append('<td>'+$(this).find('name').text()+'</td>');
 		tableRowEntry.append('<td>'+$(this).find('email').text()+'</td>');
 		tableRowEntry.append('<td>'+(($(this).find('attending').text() == '0')?'No':'Yes')+'</td>');
