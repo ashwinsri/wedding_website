@@ -255,8 +255,8 @@ border-style: solid;
 	color: #85ADFF;
 }
 
-#submitChennai,
-#submitSeattle {
+.submitChennai,
+.submitSeattle {
 	-moz-box-shadow:inset 0px 1px 0px 0px #8e008c;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #8e008c;
 	box-shadow:inset 0px 1px 0px 0px #8e008c;
@@ -291,20 +291,20 @@ border-style: solid;
 	text-align:center;
 	text-shadow:1px 1px 0px #550066;
 }
-#submitChennai:hover,
-#submitSeattle:hover {
+.submitChennai:hover,
+.submitSeattle:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #990099), color-stop(1, #400040) );
 	background:-moz-linear-gradient( center top, #990099 5%, #400040 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#990099', endColorstr='#400040');
 	background-color:#990099;
-}#submitChennai:active ,
-#submitSeattle:active {
+}.submitChennai:active ,
+.submitSeattle:active {
 	position:relative;
 	top:2px;
 }
 
-#submitChennai_Disabled,
-#submitSeattle_Disabled{
+.submitChennai_Disabled,
+.submitSeattle_Disabled{
 	-moz-box-shadow:inset 0px 1px 0px 0px #949294;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #949294;
 	box-shadow:inset 0px 1px 0px 0px #949294;
@@ -335,4 +335,22 @@ border-style: solid;
 	text-decoration:none;
 	text-align:center;
 	text-shadow:1px 1px 0px #050505;
+}
+
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+  max-width: none;
+}
+
+#stats {
+	color: white;
+	font-weight: bold;
+	font-family: Calibri, Ubuntu, Arial;
+	background-color: rgba(64,0,64,0.7);
+	display: inline-block;
+	padding: 1.5em;
 }

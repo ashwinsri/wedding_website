@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="9"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="10"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="11"></li>
+	<li data-target="#carousel-example-generic" data-slide-to="12"></li>
+	<li data-target="#carousel-example-generic" data-slide-to="13"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" style="overflow:hidden">
+    <div id="pic1" class="item active">
+      <img src = "pics/story/image0.jpg" />       
+      </div>
+    <div id="pic2" class="item ">
+      <img src = "pics/story/image1.jpg" />      
+      </div>
+    <div item="pic3" class="item ">
+      <img src = "pics/story/image2.jpg" />
+    </div>
+    <div id="pic4" class="item ">
+      <img src = "pics/story/image3.jpg" />
+    </div>
+    <div id="pic5" class="item ">
+      <img src = "pics/story/image4.jpg" />
+    </div>
+    <div id="pic6" class="item ">
+      <img src = "pics/story/image5.jpg" />
+    </div>
+    <div id="pic9" class="item ">
+      <img src = "pics/story/image9.jpg" />
+    </div>
+    <div id="pic10" class="item ">
+      <img src = "pics/story/image10.jpg" />
+    </div>
+    <div id="pic11" class="item ">
+      <img src = "pics/story/image11.jpg" />
+    </div>
+    <div id="pic12" class="item ">
+      <img src = "pics/story/image12.jpg" />
+    </div>
+	<div id="pic13" class="item ">
+      <img src = "pics/story/image13.jpg" />
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+<script type="text/javascript">
+	setTimeout(function() 
+	{
+		var w = $(".carousel-inner").width();
+		$(".carousel-inner").height(w* 0.75);
+
+		jQuery(document).bind('keyup', function(e) {
+			if (e.which==39) {
+				jQuery('#carousel-example-generic').carousel('next');
+			} else if (e.which==37) {
+				jQuery('#carousel-example-generic').carousel('prev');
+			}
+		});
+	}, 250);
+</script>

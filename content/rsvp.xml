@@ -18,10 +18,12 @@
 				<tr>
 					<td>Name:</td> 
 					<td><input type="text" name="name" id="fullname" value="" /></td>
+					<td id = "errorfullname"></td>
 				</tr>
 				<tr>
 					<td>E-Mail:</td> 
 					<td><input type="text" name="email" id="email" value="" /></td>
+					<td id = "erroremail"></td>
 				</tr>
 				<tr>
 					<td>Will you be attending? </td>
@@ -31,6 +33,7 @@
 						<option value="0">No</option>
 					</select>
 					</td>
+					<td id = "errorattend"></td>
 				</tr>
 				<tr>
 					<td>Will you need accommodation?</td>
@@ -40,14 +43,20 @@
 						<option value="0">No</option>
 					</select>
 					</td>
+					<td id = "erroraccomm"></td>
 				</tr>
 				<tr>
-					<td># of Guests</td>
+					<td># of People in your party (including you)</td>
 					<td><input name="guests" type="text" id="guests" value="" /></td>
+					<td id = "errorguests"></td>
+				</tr>
+				<tr>
+					<td>Comments</td>
+					<td><input name="comments" type="text" id="comments" value="" /></td>
 				</tr>
 			</tbody>
 		</table>
-		<p><input type="submit" value="Submit" id="rsvpChennai" /></p>
+		<p><input type="submit" value="Submit" id="rsvpChennai" class="submitChennai_Disabled" disabled="true" /></p>
 		<br>
 		<br>
 		</form>
@@ -61,10 +70,12 @@
 				<tr>
 					<td>Name:</td> 
 					<td><input type="text" name="name" id="fullname" value="" /></td>
+					<td id = "errorfullname"></td>
 				</tr>
 				<tr>
 					<td>E-Mail:</td> 
 					<td><input type="text" name="email" id="email" value="" /></td>
+					<td id = "erroremail"></td>
 				</tr>
 				<tr>
 					<td>Will you be attending? </td>
@@ -74,6 +85,7 @@
 						<option value="0">No</option>
 					</select>
 					</td>
+					<td id = "errorattend"></td>
 				</tr>
 				<tr>
 					<td>Will you need accommodation?</td>
@@ -83,18 +95,25 @@
 						<option value="0">No</option>
 					</select>
 					</td>
+					<td id = "erroraccomm"></td>
 				</tr>
 				<tr>
-					<td># of Guests</td>
+					<td># of People in your party (including you)</td>
 					<td><input type="text" name="guests" id="guests" value="" /></td>
+					<td id = "errorguests"></td>
+				</tr>
+				<tr>
+					<td>Comments</td>
+					<td><input name="comments" type="text" id="comments" value="" /></td>
 				</tr>
 			</tbody>
 		</table>
-		<p><input type="submit" value="Submit" id="rsvpSeattle" /></p>
+		<p><input type="submit" value="Submit" id="rsvpSeattle" class="submitSeattle_Disabled" disabled="true" /></p>
 		<br>
 		<br>
 		</form>
 	</div>
+	<p id="success"></p>
 </div>
 
 <script>
@@ -109,12 +128,19 @@
   var att = $("#" + formId + " select[name='attending']").val();
   var g = $("#" + formId + " input[name='guests']").val();
   var acc = $("#" + formId + " select[name='accommodation']").val();
+  var comm = $("#" + formId + " input[name='comments']").val();
+  
   $.ajax({
   type: "POST",
   url: "rsvpsubmit.php",
-  data: { id: formId , name: fullname , email: em, attending: att, guests: g, accommodation: acc },
+  data: { id: formId , name: fullname , email: em, attending: att, guests: g, accommodation: acc, comments: comm },
   success: function( data ) {
-  alert( "Form Submitted: " + data );
+  $('#success').text( "Form Submitted: " + data );
+  console.log(comm);
+  setTimeout(function() 
+  {
+	$('#success').empty();
+  }, 5000);
   }});
   });
 
