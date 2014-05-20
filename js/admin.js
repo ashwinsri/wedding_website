@@ -68,7 +68,7 @@ function xmlParser(xml) {
 	var tableID = $(this).attr('id');
 	
 	var table = $('<table id="' + tableID + '" class="table table-bordered table-condensed"></table>');
-	var tableHeader = $('<thead><tr><th></th><th>Name</th><th>E-Mail</th><th>Attending</th><th>Accommodation</th><th>Guests</th></tr></thead>');
+	var tableHeader = $('<thead><tr><th></th><th>Name</th><th>E-Mail</th><th>Attending</th><th>Accommodation</th><th>Guests</th><th>Comments</th></tr></thead>');
 	
 	table.append(tableHeader);
 	
@@ -85,6 +85,7 @@ function xmlParser(xml) {
 		tableRowEntry.append('<td>'+(($(this).find('attending').text() == '0')?'No':'Yes')+'</td>');
 		tableRowEntry.append('<td>'+(($(this).find('accommodation').text() == '0')?'No':'Yes')+'</td>');
 		tableRowEntry.append('<td>'+$(this).find('guests').text()+'</td>');
+		tableRowEntry.append('<td>'+$(this).find('comments').text()+'</td>');
 		
 		tableBody.append(tableRowEntry);
 		

@@ -138,6 +138,7 @@ $.fn.validateRSVPForm = function(id)
 	var name = false;
 	var email = false;
 	var guests = false;
+	var checkguests = true;
 	var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 	
 	var str = "submit"+id.substring(5, 12);
@@ -149,15 +150,17 @@ $.fn.validateRSVPForm = function(id)
 		//Checking Name
 		if($(id + ' #fullname').val().length > 2)
 		{
-			console.log("I'm checking mail.");
+			console.log("I'm checking name.");
 			name = true;
-			$(id + ' #fullname').css('background-color', '#D4FFFF');
+			$(id + ' #fullname').css('background-color', '#6CF558');
+			$(id).find('#errorfullname').html('<img src = "pics/icons/yes.png" />')
 		}
 		else
 		{
-			console.log("I'm checking mail.");
+			console.log("I'm checking name.");
 			name = false;
-			$(id + ' #fullname').css('background-color', '#FFD4D4');
+			$(id + ' #fullname').css('background-color', '#FF8080');
+			$(id).find('#errorfullname').html('<img src = "pics/icons/no.png" />')
 			$(id).find("input[type='submit']").attr('class', str+'_Disabled').prop('disabled', true);
 		}
 		
@@ -168,12 +171,14 @@ $.fn.validateRSVPForm = function(id)
 			if(emailReg.test($('#email').val()))
 			{
 				email = true;
-				$(id + ' #email').css('background-color', '#D4FFFF');
+				$(id).find('#erroremail').html('<img src = "pics/icons/yes.png" />')
+				$(id + ' #email').css('background-color', '#6CF558');
 			}
 			else
 			{
 				email = false;
-				$(id + ' #email').css('background-color', '#FFD4D4');
+				$(id + ' #email').css('background-color', '#FF8080');
+				$(id + ' #erroremail').html('<img src = "pics/icons/no.png" />')
 				$(id).find("input[type='submit']").attr('class', str+'_Disabled').prop('disabled', true);
 			}
 		}
@@ -181,7 +186,8 @@ $.fn.validateRSVPForm = function(id)
 		{
 			console.log("I'm checking email.");
 			email = false;
-			$(id + ' #email').css('background-color', '#FFD4D4');
+			$(id).find('#erroremail').html('<img src = "pics/icons/no.png" />')
+			$(id + ' #email').css('background-color', '#FF8080');
 			$(id).find("input[type='submit']").attr('class', str+'_Disabled').prop('disabled', true);
 		}
 		
@@ -190,39 +196,72 @@ $.fn.validateRSVPForm = function(id)
 		{
 			console.log("I'm checking attending");
 			$(id + ' #accomm').prop("disabled", true);
+			
+			guests = true;
+			checkguests = false;
+			$(id + ' #guests').prop('disabled',true);
+			
+			$(id).find('#erroraccomm').html('<img src = "pics/icons/yes.png" />')
+			$(id).find('#errorguests').html('<img src = "pics/icons/yes.png" />')
+			if(checkguests)
+			{
+				console.log("I'm going to check guests.");
+			}
+			else
+			{
+				console.log("I'm not going to check guests.");
+			}
 		}
 		else if($(id + ' #attend').find(":selected").val() == 1)
 		{
 			console.log("I'm checking attending");
+			console.log("I'm going to check guests.");
 			$(id + ' #accomm').prop("disabled", false);
+			
+			guests = false;
+			checkguests = true;
+			$(id + ' #guests').prop('disabled',false);
+			
+			$(id + ' #erroraccomm').empty();
+			$(id + ' #errorguests').empty();
 		}
 		
-		//Checking guests
-		if($(id + ' #guests').val().length > 0)
+		setTimeout(function() 
 		{
-			console.log("I'm checking guests.");
-			if($.isNumeric($(id + ' #guests').val()))
+			if(checkguests == true)
 			{
-				guests = true;
-				$(id + ' #guests').css('background-color', '#D4FFFF');
+				//Checking guests
+				if(($(id + ' #guests').val().length > 0))
+				{
+					console.log("I'm checking guests.");
+					if($.isNumeric($(id + ' #guests').val()))
+					{
+						guests = true;
+						$(id + ' #guests').css('background-color', '#6CF558');
+						$(id).find('#errorguests').html('<img src = "pics/icons/yes.png" />')
+					}
+					else
+					{
+						$(id + ' #guests').css('background-color', '#FF8080');
+						guests = false;
+						$(id).find("input[type='submit']").attr('class', str+'_Disabled').prop('disabled', true);
+						$(id).find('#errorguests').html('<img src = "pics/icons/no.png" />')
+					}
+				}
+				else
+				{
+					console.log("I'm checking guests.");
+					$(id + ' #guests').css('background-color', '#FF8080');
+					guests = false;
+					$(id).find('#errorguests').html('<img src = "pics/icons/no.png" />')
+					$(id).find("input[type='submit']").attr('class', str+'_Disabled').prop('disabled', true);
+				}
 			}
-			else
-			{
-				$(id + ' #guests').css('background-color', '#FFD4D4');
-				guests = false;
-				$(id).find("input[type='submit']").attr('class', str+'_Disabled').prop('disabled', true);
-			}
-		}
-		else
-		{
-			console.log("I'm checking guests.");
-			$(id + ' #guests').css('background-color', '#FFD4D4');
-			guests = false;
-			$(id).find("input[type='submit']").attr('class', str+'_Disabled').prop('disabled', true);
-		}
-
+		}, 5);
+		
 		setTimeout(function()
 		{
+			console.log("name = " + name + " email = " + email + " guests = " + guests);
 			if(name && email && guests)
 			{
 				$(window).keydown(function(event)
@@ -237,6 +276,7 @@ $.fn.validateRSVPForm = function(id)
 				$(id).find("input[type='submit']").attr('class', str).prop('disabled', false);
 				$(id).find("input[type='submit']").on('click', function()
 				{
+					submitClicked = true;
 					$(id).find("input[type='submit']").unbind('click');
 					setTimeout(function()
 					{
@@ -245,6 +285,6 @@ $.fn.validateRSVPForm = function(id)
 					}, 100);
 				});
 			}
-		}, 100);
+		}, 200);
 	});
 }

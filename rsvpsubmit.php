@@ -21,6 +21,7 @@ $entry->addChild("email", $_POST["email"]);
 $entry->addChild("attending", $_POST["attending"]);
 $entry->addChild("guests", $_POST["guests"]);
 $entry->addChild("accommodation", $_POST["accommodation"]);
+$entry->addChild("comments", $_POST["comments"]);
 
 // Write the entire blog to the file
 $file = fopen($filename, 'w');
