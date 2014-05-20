@@ -168,10 +168,10 @@ $.fn.validateRSVPForm = function(id)
 		if(($(id + ' #email').val().length > 0))
 		{
 			console.log("I'm checking email.");
-			if(emailReg.test($('#email').val()))
+			if(emailReg.test($(id + '#email').val()))
 			{
 				email = true;
-				$(id).find('#erroremail').html('<img src = "pics/icons/yes.png" />')
+			    $(id).find('#erroremail').html('<img src = "pics/icons/yes.png" />');
 				$(id + ' #email').css('background-color', '#6CF558');
 			}
 			else
