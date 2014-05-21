@@ -165,10 +165,10 @@ $.fn.validateRSVPForm = function(id)
 		}
 		
 		//Checking e-mail
-		if(($(id + ' #email').val().length > 0))
+		if(($(id).find(' #email').val().length > 0))
 		{
 			console.log("I'm checking email.");
-			if(emailReg.test($(id + '#email').val()))
+			if(emailReg.test($(id + ' #email').val()))
 			{
 				email = true;
 			    $(id).find('#erroremail').html('<img src = "pics/icons/yes.png" />');
@@ -234,7 +234,7 @@ $.fn.validateRSVPForm = function(id)
 				if(($(id + ' #guests').val().length > 0))
 				{
 					console.log("I'm checking guests.");
-					if($.isNumeric($(id + ' #guests').val()))
+					if($.isNumeric($(id + ' #guests').val()) && ($(id + ' #guests').val() > 0))
 					{
 						guests = true;
 						$(id + ' #guests').css('background-color', '#6CF558');
