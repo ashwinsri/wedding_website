@@ -48,6 +48,12 @@ Desc: Enable interactive features.
 *******************************************/
 $.fn.enPageFns = function()
 {
+	// Disable caching of AJAX responses
+	$.ajaxSetup(
+	{
+		cache: false
+	});
+	
 	$('li').hover(function()
 	{	
 		$(this).css('cursor', 'pointer');

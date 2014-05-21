@@ -354,3 +354,19 @@ border-style: solid;
 	display: inline-block;
 	padding: 1.5em;
 }
+
+.weddingsched  h3
+{
+	font-family: 'BebasNeue', Serif, Arial, Ubuntu;
+}
+.weddingsched h5 {
+	font-family:  Serif, Arial, Ubuntu;
+	color: white;
+	font-weight: bold;
+}
+
+.weddingsched p
+{
+	/*font-family: Serif, Arial, Ubuntu;
+	font-size: 1.2vmax; */
+}
