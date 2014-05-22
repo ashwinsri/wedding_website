@@ -359,14 +359,21 @@ border-style: solid;
 {
 	font-family: 'BebasNeue', Serif, Arial, Ubuntu;
 }
+
+.weddingsched  h4
+{
+	font-family: 'Blackout-Midnight', Serif, Arial, Ubuntu;
+}
+
 .weddingsched h5 {
 	font-family:  Serif, Arial, Ubuntu;
 	color: white;
 	font-weight: bold;
 }
 
-.weddingsched p
-{
-	/*font-family: Serif, Arial, Ubuntu;
-	font-size: 1.2vmax; */
+.weddingsched  a:link,
+.weddingsched a:visited,
+.weddingsched a:hover {
+	color: #85ADFF;
+	
 }
