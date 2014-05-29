@@ -220,9 +220,8 @@ border-style: solid;
 }
 
 .carousel-indicators li{
-    width: 7%; 
-    height:100%;
-    background-size: 100%;
+    width: 20px; 
+    height:20px;
 }
 .attractions a:link,
 .attractions a:visited,
