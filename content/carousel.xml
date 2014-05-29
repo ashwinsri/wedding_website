@@ -18,23 +18,23 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" style="overflow:hidden">
     <div id="pic1" class="item active">
-      <img src = "pics/IMG_1271.JPG" />       
+      <img src = "pics/IMG_1271.jpg" />       
       </div>
     <div id="pic2" class="item ">
       <img src = "pics/IMG_0002.jpg" />      
       </div>
     <div item="pic3" class="item ">
-      <img src = "pics/IMG_1687.JPG" />
+      <img src = "pics/IMG_1687.jpg" />
     </div>
 
     <div id="pic4" class="item ">
-      <img src = "pics/IMG_1689.JPG" />
+      <img src = "pics/IMG_1689.jpg" />
     </div>
     <div id="pic5" class="item ">
       <img src = "pics/IMG_1750.jpg" />
     </div>
     <div id="pic6" class="item ">
-      <img src = "pics/IMG_2658.JPG" />
+      <img src = "pics/IMG_2658.jpg" />
     </div>
     <div id="pic7" class="item ">
       <img src = "pics/IMG_3028.jpg" />
@@ -43,13 +43,13 @@
       <img src = "pics/IMG_3029.jpg" />
     </div>
     <div id="pic9" class="item ">
-      <img src = "pics/IMG_228.JPG" />
+      <img src = "pics/IMG_228.jpg" />
     </div>
     <div id="pic10" class="item ">
-      <img src = "pics/IMG_1137.JPG" />
+      <img src = "pics/IMG_1137.jpg" />
     </div>
     <div id="pic11" class="item ">
-      <img src = "pics/IMG_2751.JPG" />
+      <img src = "pics/IMG_2751.jpg" />
     </div>
   </div>
 
