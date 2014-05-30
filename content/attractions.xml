@@ -1,78 +1,165 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<h3>OUTDOORS</h3>
-	<h3><a href = "https://www.flickr.com/search/?q=Marina+Beach+Chennai" target="_newtab">Marina Beach</a></h3>
-	<p>The second longest beach in the world. Go for the water, stay for the street-food.</p>
-	<a href ="http://en.wikipedia.org/wiki/Marina_Beach" target="_newtab">Wikipedia</a><br>
-	<a href ="http://goo.gl/maps/S3lm6" target="_newtab">Directions</a><br>
-		
-	<h3><a href = "http://www.flickr.com/search/?q=Mahabalipuram" target="_newtab">Mamallapuram</a></h3>
-	<p>Ancient sea-port of the Pallava Dynasty, famous for it's stone carvings. CULTURE!</p>
-	<a href ="http://wikitravel.org/en/Mamallapuram" target="_newtab">Wikipedia</a><br>
-	<a href ="http://goo.gl/maps/ZwZZK" target="_newtab">Directions</a><br>
-		
-	<h3><a href = "http://www.flickr.com/search/?q=Ubbalamadugu+Falls" target="_newtab">Tada Falls</a></h3>
-	<p>For a quick getaway from the hustle and bustle of city life. If trekking is your thing, you should pay Tada falls a visit.</p>
-	<a href ="http://en.wikipedia.org/wiki/Ubbalamadugu_Falls" target="_newtab">Wikipedia</a><br>
-	<a href ="http://goo.gl/maps/gAjK4" target="_newtab">Directions</a><br>
 	
-	<h3><a href = "http://www.flickr.com/search/?q=Pondicherry" target="_newtab">Pondicherry</a></h3>
-	<p>This one's as much about <a href="http://www.flickr.com/search/?q=East+Coast+Road+Chennai" target="_newtab">the journey</a> as it is about the destination. The drive is guaranteed to be just as... therapeutic. *WINK*</p>
-	<a href ="http://en.wikipedia.org/wiki/Pondicherry" target="_newtab">Pondicherry Wiki</a><br>
-	<a href ="http://en.wikipedia.org/wiki/East_Coast_Road" target="_newtab">ECR Wiki</a><br>
-	<a href ="http://goo.gl/maps/Xm9Ay" target="_newtab">Directions</a><br>
-	<hr>
-<h3>CULTURE</h3>
-	<h3><a href = "http://www.flickr.com/search/?q=Kapaleeswarar+Temple" target="_newtab">Kapaleeswarar Temple</a></h3>
-	<p>A 7<sup>th</sup> Century CE Hindu temple built during the Pallava rule. It holds immense mythological significance and is a marquee landmark in Mylapore.</p>
-	<a href ="http://en.wikipedia.org/wiki/Kapaleeswarar_Temple" target="_newtab">Wikipedia</a><br>
-	<a href ="http://goo.gl/maps/dvZEV" target="_newtab">Directions</a><br>
-		
-	<h3><a href = "http://www.flickr.com/search/?q=Santhome+Church" target="_newtab">San Thome Basilica</a></h3>
-	<p>A 16<sup>th</sup> Century  Roman Catholic (Latin Rite) minor basilica in Santhome. It was built by Portuguese explorers, over the tomb of St. Thomas, an apostle of Jesus.</p>
-	<a href ="http://en.wikipedia.org/wiki/Santhome_Church" target="_newtab">Wikipedia</a><br>
-	<a href ="http://goo.gl/maps/Gyhh7" target="_newtab">Directions</a><br>
+	<ul class="nav nav-pills nav-justified" style="width:100%">
+		<li class="active">
+			<a href="#chennaiAttractions" data-toggle="tab"><h3>Chennai</h3></a>
+		</li>
+		<li>
+			<a href="#seattleAttractions" data-toggle="tab"><h3>Seattle</h3></a>
+		</li>
+	</ul>
 	
-	<h3><a href = "http://www.flickr.com/search/?q=Kalakshetra" target="_newtab">Kalakshetra</a></h3>
-	<p>A cultural academy dedicated to the preservation of traditional values in Indian art, especially in the field of Bharatanatyam dance and Gandharvaveda music.</p>
-	<a href ="http://en.wikipedia.org/wiki/Kalakshetra" target="_newtab">Wikipedia</a><br>
-	<a href ="http://goo.gl/maps/0IXmG" target="_newtab">Directions</a><br>
-	
-	<h3><a href = "http://www.flickr.com/search/?q=Dakshinchitra" target="_newtab">Dakshin Chitra</a></h3>
-	<p>A center for the living traditions of art, folk performing arts, craft and architecture of India with an emphasis on the traditions of South India.</p>
-	<a href ="http://en.wikipedia.org/wiki/Dakshinchitra" target="_newtab">Wikipedia</a><br>
-	<a href ="http://goo.gl/maps/WSN1N" target="_newtab">Directions</a><br>
-	<hr>
-	
-<h3>DINING</h3>
-	<h3><a href = "http://www.flickr.com/search/?q=South+Indian+food" target="_newtab">South Indian</a></h3>
-	<p>Saravana Bhavan is South Indian Food. You want to go to there.</p>
-	<a href ="http://en.wikipedia.org/wiki/Saravana_Bhavan" target="_newtab">Wikipedia</a><br>
-	<a href ="http://goo.gl/maps/N2bc8" target="_newtab">Directions</a><br>
-	
-	<h3><a href = "http://www.flickr.com/search/?q=Indian+Sweets" target="_newtab">Sweets & Snacks</a></h3>
-	<p>Traditional Indian sweets are an<a href="http://en.wikipedia.org/wiki/List_of_Indian_sweets_and_desserts" target="_newtab">  experience </a>you won't want to miss.</p>
-	<p>Here're a couple:</p>
-	<a href ="http://www.grandsweets.in/index.php#" target="_newtab">Grand Sweets & Snacks</a><br>
-	<a href ="http://www.shreemithai.in/" target="_newtab">Shree Mithai</a><br>
-	
-	<h3><a href = "http://www.flickr.com/search?q=Chaat+Indian+food" target="_newtab">Chaat</a></h3>
-	<p>Chaat is a term describing savoury snacks, typically served at road-side tracks from stalls or food carts in India, Pakistan, Nepal and Bangladesh.</p>
-	<a href ="http://www.gangotree.in/" target="_newtab">Gangotree</a><br>
-	<a href ="http://goo.gl/maps/gzQAx" target="_newtab">Directions</a><br>
-	
-	<h3><a href = "http://www.flickr.com/search?q=North+Indian+food" target="_newtab">North Indian</a></h3>
-	<p>Like South Indian food, but for the North. Except not at all like South Indian food. But just as delish.</p>
-	<p>Consider these places:</p>
-	<a href ="http://www.copperchimney.in/" target="_newtab">Copper Chimney</a>,
-	<a href ="http://speciality.co.in/sigree/index.html" target="_newtab">Sigree</a>,
-	<a href ="https://www.facebook.com/TadkaTalk" target="_newtab">Tadka Talk</a> &amp; 
-	<a href ="http://creamcentre.com/" target="_newtab">Cream Centre</a><br>
-	<hr>
-	
-<h3>NIGHTLIFE</h3>
-	<p>Because <a href = "http://img.izilol.com/pics/20111026/640/funny-drunk-people-29-pics-4-gifs_14.jpg" target="_newtab"> let's face it...</a></p>
-	<a href ="https://www.facebook.com/Illusionsmadras" target="_newtab">Illusions</a>, 
-	<a href ="http://www.raintreehotels.com/html/st-marys-hotel-location.asp" target="_newtab">Havana</a>,
-	<a href ="http://www.theresidency.in/residency-tower/bike-barrel.asp" target="_newtab">Bike & Barrel</a>, 	
-	<a href ="https://www.facebook.com/BBar.Somerset?rf=185317254832416" target="_newtab">B Bar</a> &amp;
-	<a href ="https://www.facebook.com/dublinchennaiclub" target="_newtab">Dublin</a>
+	<div class="tab-content">
+		<div class="tab-pane active" id="chennaiAttractions">
+			<h3>OUTDOORS</h3>
+				<h3><a href = "https://www.flickr.com/search/?q=Marina+Beach+Chennai" target="_newtab">Marina Beach</a></h3>
+				<p>The second longest beach in the world. Go for the water, stay for the street-food.</p>
+				<a href ="http://en.wikipedia.org/wiki/Marina_Beach" target="_newtab">Wikipedia</a><br>
+				<a href ="http://goo.gl/maps/S3lm6" target="_newtab">Directions</a><br>
+					
+				<h3><a href = "http://www.flickr.com/search/?q=Mahabalipuram" target="_newtab">Mamallapuram</a></h3>
+				<p>Ancient sea-port of the Pallava Dynasty, famous for it's stone carvings. CULTURE!</p>
+				<a href ="http://wikitravel.org/en/Mamallapuram" target="_newtab">Wikipedia</a><br>
+				<a href ="http://goo.gl/maps/ZwZZK" target="_newtab">Directions</a><br>
+					
+				<h3><a href = "http://www.flickr.com/search/?q=Ubbalamadugu+Falls" target="_newtab">Tada Falls</a></h3>
+				<p>For a quick getaway from the hustle and bustle of city life. If trekking is your thing, you should pay Tada falls a visit.</p>
+				<a href ="http://en.wikipedia.org/wiki/Ubbalamadugu_Falls" target="_newtab">Wikipedia</a><br>
+				<a href ="http://goo.gl/maps/gAjK4" target="_newtab">Directions</a><br>
+				
+				<h3><a href = "http://www.flickr.com/search/?q=Pondicherry" target="_newtab">Pondicherry</a></h3>
+				<p>This one's as much about <a href="http://www.flickr.com/search/?q=East+Coast+Road+Chennai" target="_newtab">the journey</a> as it is about the destination. The drive is guaranteed to be just as... therapeutic. *WINK*</p>
+				<a href ="http://en.wikipedia.org/wiki/Pondicherry" target="_newtab">Pondicherry Wiki</a><br>
+				<a href ="http://en.wikipedia.org/wiki/East_Coast_Road" target="_newtab">ECR Wiki</a><br>
+				<a href ="http://goo.gl/maps/Xm9Ay" target="_newtab">Directions</a><br>
+				<hr>
+			<h3>CULTURE</h3>
+				<h3><a href = "http://www.flickr.com/search/?q=Kapaleeswarar+Temple" target="_newtab">Kapaleeswarar Temple</a></h3>
+				<p>A 7<sup>th</sup> Century CE Hindu temple built during the Pallava rule. It holds immense mythological significance and is a marquee landmark in Mylapore.</p>
+				<a href ="http://en.wikipedia.org/wiki/Kapaleeswarar_Temple" target="_newtab">Wikipedia</a><br>
+				<a href ="http://goo.gl/maps/dvZEV" target="_newtab">Directions</a><br>
+					
+				<h3><a href = "http://www.flickr.com/search/?q=Santhome+Church" target="_newtab">San Thome Basilica</a></h3>
+				<p>A 16<sup>th</sup> Century  Roman Catholic (Latin Rite) minor basilica in Santhome. It was built by Portuguese explorers, over the tomb of St. Thomas, an apostle of Jesus.</p>
+				<a href ="http://en.wikipedia.org/wiki/Santhome_Church" target="_newtab">Wikipedia</a><br>
+				<a href ="http://goo.gl/maps/Gyhh7" target="_newtab">Directions</a><br>
+				
+				<h3><a href = "http://www.flickr.com/search/?q=Kalakshetra" target="_newtab">Kalakshetra</a></h3>
+				<p>A cultural academy dedicated to the preservation of traditional values in Indian art, especially in the field of Bharatanatyam dance and Gandharvaveda music.</p>
+				<a href ="http://en.wikipedia.org/wiki/Kalakshetra" target="_newtab">Wikipedia</a><br>
+				<a href ="http://goo.gl/maps/0IXmG" target="_newtab">Directions</a><br>
+				
+				<h3><a href = "http://www.flickr.com/search/?q=Dakshinchitra" target="_newtab">Dakshin Chitra</a></h3>
+				<p>A center for the living traditions of art, folk performing arts, craft and architecture of India with an emphasis on the traditions of South India.</p>
+				<a href ="http://en.wikipedia.org/wiki/Dakshinchitra" target="_newtab">Wikipedia</a><br>
+				<a href ="http://goo.gl/maps/WSN1N" target="_newtab">Directions</a><br>
+				<hr>
+				
+			<h3>DINING</h3>
+				<h3><a href = "http://www.flickr.com/search/?q=South+Indian+food" target="_newtab">South Indian</a></h3>
+				<p>Saravana Bhavan is South Indian Food. You want to go to there.</p>
+				<a href ="http://en.wikipedia.org/wiki/Saravana_Bhavan" target="_newtab">Wikipedia</a><br>
+				<a href ="http://goo.gl/maps/N2bc8" target="_newtab">Directions</a><br>
+				
+				<h3><a href = "http://www.flickr.com/search/?q=Indian+Sweets" target="_newtab">Sweets & Snacks</a></h3>
+				<p>Traditional Indian sweets are an<a href="http://en.wikipedia.org/wiki/List_of_Indian_sweets_and_desserts" target="_newtab">  experience </a>you won't want to miss.</p>
+				<p>Here're a couple:</p>
+				<a href ="http://www.grandsweets.in/index.php#" target="_newtab">Grand Sweets & Snacks</a><br>
+				<a href ="http://www.shreemithai.in/" target="_newtab">Shree Mithai</a><br>
+				
+				<h3><a href = "http://www.flickr.com/search?q=Chaat+Indian+food" target="_newtab">Chaat</a></h3>
+				<p>Chaat is a term describing savoury snacks, typically served at road-side tracks from stalls or food carts in India, Pakistan, Nepal and Bangladesh.</p>
+				<a href ="http://www.gangotree.in/" target="_newtab">Gangotree</a><br>
+				<a href ="http://goo.gl/maps/gzQAx" target="_newtab">Directions</a><br>
+				
+				<h3><a href = "http://www.flickr.com/search?q=North+Indian+food" target="_newtab">North Indian</a></h3>
+				<p>Like South Indian food, but for the North. Except not at all like South Indian food. But just as delish.</p>
+				<p>Consider these places:</p>
+				<a href ="http://www.copperchimney.in/" target="_newtab">Copper Chimney</a>,
+				<a href ="http://speciality.co.in/sigree/index.html" target="_newtab">Sigree</a>,
+				<a href ="https://www.facebook.com/TadkaTalk" target="_newtab">Tadka Talk</a> &amp; 
+				<a href ="http://creamcentre.com/" target="_newtab">Cream Centre</a><br>
+				<hr>
+				
+			<h3>NIGHTLIFE</h3>
+				<p>Because <a href = "http://img.izilol.com/pics/20111026/640/funny-drunk-people-29-pics-4-gifs_14.jpg" target="_newtab"> let's face it</a></p>
+				<a href ="https://www.facebook.com/Illusionsmadras" target="_newtab">Illusions</a>, 
+				<a href ="http://www.raintreehotels.com/html/st-marys-hotel-location.asp" target="_newtab">Havana</a>,
+				<a href ="http://www.theresidency.in/residency-tower/bike-barrel.asp" target="_newtab">Bike & Barrel</a>, 	
+				<a href ="https://www.facebook.com/BBar.Somerset?rf=185317254832416" target="_newtab">B Bar</a> &amp;
+				<a href ="https://www.facebook.com/dublinchennaiclub" target="_newtab">Dublin</a>
+		</div>
+		<div class="tab-pane" id="seattleAttractions">
+			<h3>Out &amp; About</h3><br>
+			<h4><a href="http://www.spaceneedle.com/home/" target="_newtab">Space Needle</a></h4>
+				<p>You've all heard about it- now come see it. If you feel like your wallet could be lighter, the revolving restaurant at the top is supposed to be quite nice.</p><br>
+
+			<h4><a href="http://www.pikeplacemarket.org/" target="_newtab">Pike Place Market</a></h4>
+				<p>Another Seattle icon. One of the oldest farmers markets in the world sitting right at the waterfront. Popular among tourists and locals alike.</p><br>
+
+			<h4><a href="http://www.museumofflight.org/" target="_newtab">Museum of Flight</a></h4>
+				<p>Museum dedicated to Airplanes in the city that brought you Boeing.</p><br>
+
+			<h4><a href="http://www.seattleartmuseum.org/" target="_newtab">Seattle Art Museum</a></h4> 
+				<p>you can't miss the giant hammer man.</p><br>
+
+			<h4><a href="http://www.nps.gov/mora/index.htm" target="_newtab">Mt. Ranier</a></h4>
+				<p>Huge dormant volcano. Awesome views and hikes.</p><br>
+
+			<h4><a href="http://www.snoqualmiefalls.com/" target="_newtab">Snoqualmie Falls</a></h4>
+				<p>A world-renown waterfall that cascades 268 feet over granite cliffs.</p><br>
+				<hr>
+			<h3>Interesting Activities</h3><br>
+
+			<h4><a href="http://www.ridetheducksofseattle.com/" target="_newtab">Ride the Ducks Tour</a></h4>
+
+			 <p>Land and water (yup) tour of the downtown area. Definitely worth it.</p><br>
+
+			<h4><a href="https://www.undergroundtour.com/" target="_newtab">Seattle Underground Tour</a></h4>
+				<p>Tour of the old Seattle city that was burned down in a massive fire. Cool albeit a tad spooky.</p><br>
+
+			<h4><a href="http://www.washington.edu/ima/wac/" target="_newtab">Canoeing/Kayaking on one of the lakes</a></h4>
+				<p>University of Washington Waterfront offers good service for this.</p><br>
+
+			<h4><a href="http://seattleghost.com/" target="_newtab">Pike Place Ghost Tour</a></h4>
+				<p>Definitely not for the faint of heart!</p><br>
+				<hr>
+
+			<h3>Restaurants</h3>
+				<p>Way too many, but here are some favorites:</p><br>
+
+			<h4>Pizza</h4>
+				<h4><a href ="http://tuttabella.com/" target="_newtab">Tutta Bella</a></h4> 
+				<p>In their own words: "Northwest’s first and most celebrated authentic Neapolitan pizzeria". </p>
+				<p>Other popular local brands:</p>
+				<h4><a href="http://www.pagliacci.com/" target="_newtab">Pagliacci</a></h4>
+				<h4><a href="http://www.zeekspizza.com/" target="_newtab">Zeek’s</a></h4><br>
+
+			<h4>Italian</h4>
+				<h4><a href="http://www.girardis-osteria.com/" target="_newtab">Girardi's Osteria</a></h4> 
+				<p>Our favorite Italian restaurant is in Edmonds - great food and worth the drive!</p>
+				<p>Other popular restaurants:</p>
+				<h4><a href="http://thepinkdoor.net/" target="_newtab">Pink Door</a></h4> 
+				<h4><a href="http://www.piatti.com/seattle/" target="_newtab">Piatti</a></h4><br>
+
+			<h4>Mexican</h4>
+				<h4><a href="http://aguaverde.com/" target="_newtab">Aqua Verde</a></h4>
+				<p>Near UW Waterfront. Good vegetarian options and homemade salsa.</p> 
+				<p>Other popular Mexican eateries are:</p>
+				<h4><a href="http://www.rositasrestaurant.com/" target="_newtab">Rositas</a></h4>
+				<h4><a href="http://www.gorditosmexicanfood.com/" target="_newtab">Gorditos</a></h4><br>
+
+			<h4>Indian</h4>
+				<h4><a href="http://www.ohindiarestaurant.com/" target="_newtab">'Oh! India'</a></h4> 
+				<p>If you didn't get enough of Indian food at the reception and want to visit the Indian concentrated suburb of Redmond.</p>
+				<h4><a href="http://www.bengaltigerwa.com/index.php" target="_newtab">Bengal Tiger</a></h4> 
+				If you don't want to travel that far, this is a pretty good North Indian restaurant.</p><br>
+
+			<h4>Thai</h4>
+				<h4><a href="http://www.jhanjay.com/" target="_newtab">Jhanjay</a></h4>
+				<p>A vegetarian Thai restaurant with excellent dishes.</p> 
+				<p>If you prefer to have carnivorous Thai food,</p> 
+				<h4><a href="http://www.wildginger.net/" target="_newtab">Wild Ginger</a></h4>
+				<h4><a href="https://plus.google.com/111644629153409517752/about?gl=us&hl=en" target="_newtab">Thai Tom</a></h4>
+		</div>
+	</div>

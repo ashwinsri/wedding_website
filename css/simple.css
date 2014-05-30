@@ -376,3 +376,16 @@ border-style: solid;
 	color: #85ADFF;
 	
 }
+
+
+.nav > li > a:hover,
+.nav > li > a:focus ,
+.nav > li > a.active,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a.active{
+	
+	text-decoration: none;
+	background-color: #400040;
+	color: white;
+}
